@@ -1,0 +1,109 @@
+\hypertarget{class_shader}{}\section{Shader Class Reference}
+\label{class_shader}\index{Shader@{Shader}}
+
+
+A Single \mbox{\hyperlink{class_shader}{Shader}} module and shader stage create info.  
+
+
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shader_ac7ee3d9c3c847af0280af86264a2293a}{Shader}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shader_a6dd75dee2ed363e1ecc5caed85fe92ba}{load}} (const std\+::vector$<$ char $>$ \&code, Vk\+Shader\+Stage\+Flag\+Bits stage)
+\begin{DoxyCompactList}\small\item\em Create a shader object from S\+P\+I\+R-\/V code, and set a stage during which it will be used This method immediately creates a Vk\+Shader\+Module object, and discards the code given. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shader_a28a9274fb00f980dd5f7f89f10809100}\label{class_shader_a28a9274fb00f980dd5f7f89f10809100}} 
+void \mbox{\hyperlink{class_shader_a28a9274fb00f980dd5f7f89f10809100}{free}} ()
+\begin{DoxyCompactList}\small\item\em Free the Vulkan resources created by the \mbox{\hyperlink{class_shader}{Shader}} Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shader_a741b7724aab486e8f802a1a9db73de82}\label{class_shader_a741b7724aab486e8f802a1a9db73de82}} 
+Vk\+Pipeline\+Shader\+Stage\+Create\+Info \mbox{\hyperlink{class_shader_a741b7724aab486e8f802a1a9db73de82}{get\+Shader\+Stage\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve a Vk\+Pipeline\+Shader\+Stage\+Create\+Info object from the shader Information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shader_aaa484811d944aa3e484e25a540864fcd}\label{class_shader_aaa484811d944aa3e484e25a540864fcd}} 
+Vk\+Shader\+Stage\+Flag\+Bits \mbox{\hyperlink{class_shader_aaa484811d944aa3e484e25a540864fcd}{get\+Stage}} () const
+\begin{DoxyCompactList}\small\item\em Get the stage this shader is used in (\mbox{\hyperlink{struct_vertex}{Vertex}}, Fragment, etc.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shader_ad2d07a27f021556943102da0479a9e08}{create\+Shader\+Module}} (const std\+::vector$<$ char $>$ \&code)
+\begin{DoxyCompactList}\small\item\em Create the Vk\+Shader\+Module object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shader_ab04cb4258d4db018c279072d41390c66}\label{class_shader_ab04cb4258d4db018c279072d41390c66}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_shader_ab04cb4258d4db018c279072d41390c66}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em The Vulkan Context Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shader_ab84a76bef36eeaabace8bf76c17a7566}\label{class_shader_ab84a76bef36eeaabace8bf76c17a7566}} 
+Vk\+Shader\+Stage\+Flag\+Bits \mbox{\hyperlink{class_shader_ab84a76bef36eeaabace8bf76c17a7566}{m\+Stage}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+LL
+\begin{DoxyCompactList}\small\item\em The stage the shader operates during. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shader_af2a3f32d0763dbbea9cefc221e1f8e84}\label{class_shader_af2a3f32d0763dbbea9cefc221e1f8e84}} 
+Vk\+Shader\+Module \mbox{\hyperlink{class_shader_af2a3f32d0763dbbea9cefc221e1f8e84}{m\+Shader\+Module}} = V\+K\+\_\+\+N\+U\+L\+L\+\_\+\+H\+A\+N\+D\+LE
+\begin{DoxyCompactList}\small\item\em The shader module (created in \mbox{\hyperlink{class_shader_a6dd75dee2ed363e1ecc5caed85fe92ba}{load()}}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shader_a8170f7964c1a52cf7d4662326e7ecf56}\label{class_shader_a8170f7964c1a52cf7d4662326e7ecf56}} 
+Vk\+Pipeline\+Shader\+Stage\+Create\+Info \mbox{\hyperlink{class_shader_a8170f7964c1a52cf7d4662326e7ecf56}{m\+Shader\+Stage\+Info}}
+\begin{DoxyCompactList}\small\item\em Info for creating a shader stage in pipeline creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Single \mbox{\hyperlink{class_shader}{Shader}} module and shader stage create info. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shader_ac7ee3d9c3c847af0280af86264a2293a}\label{class_shader_ac7ee3d9c3c847af0280af86264a2293a}} 
+\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shader_ad2d07a27f021556943102da0479a9e08}\label{class_shader_ad2d07a27f021556943102da0479a9e08}} 
+\index{Shader@{Shader}!createShaderModule@{createShaderModule}}
+\index{createShaderModule@{createShaderModule}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{createShaderModule()}{createShaderModule()}}
+{\footnotesize\ttfamily void Shader\+::create\+Shader\+Module (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create the Vk\+Shader\+Module object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & A byte array containing the S\+P\+I\+R-\/V shader code \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shader_a6dd75dee2ed363e1ecc5caed85fe92ba}\label{class_shader_a6dd75dee2ed363e1ecc5caed85fe92ba}} 
+\index{Shader@{Shader}!load@{load}}
+\index{load@{load}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Shader\+::load (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{code,  }\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{stage }\end{DoxyParamCaption})}
+
+
+
+Create a shader object from S\+P\+I\+R-\/V code, and set a stage during which it will be used This method immediately creates a Vk\+Shader\+Module object, and discards the code given. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & A byte array of the loaded S\+P\+I\+R-\/V code \\
+\hline
+{\em stage} & The stage during which this shader will be run in a pipeline \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Shader.\+h\item 
+src/Shader.\+cpp\end{DoxyCompactItemize}

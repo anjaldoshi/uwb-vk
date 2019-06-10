@@ -1,0 +1,103 @@
+\hypertarget{class_command_pool}{}\section{Command\+Pool Class Reference}
+\label{class_command_pool}\index{CommandPool@{CommandPool}}
+
+
+Allocation and management of Command Buffers.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Pool.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_command_pool_ace23b24c2f86842645c6c371edba8df5}{Command\+Pool}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_pool_aa544338f9f63213d1d5d929853670b95}\label{class_command_pool_aa544338f9f63213d1d5d929853670b95}} 
+void \mbox{\hyperlink{class_command_pool_aa544338f9f63213d1d5d929853670b95}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize by creating a Vk\+Command\+Pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_pool_ace0b12d239828aadeaf6b1e876a24533}\label{class_command_pool_ace0b12d239828aadeaf6b1e876a24533}} 
+void \mbox{\hyperlink{class_command_pool_ace0b12d239828aadeaf6b1e876a24533}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup by destroying the Vk\+Command\+Pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_pool_a333fb2b62823ad527f263bc0b8a72d4e}{allocate\+Command\+Buffers}} (std\+::vector$<$ Vk\+Command\+Buffer $>$ \&command\+Buffers, Vk\+Command\+Buffer\+Level level)
+\begin{DoxyCompactList}\small\item\em Allocate command buffers from the pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_pool_a556f939f99a7044cc9e3292750c8a749}{free\+Command\+Buffers}} (std\+::vector$<$ Vk\+Command\+Buffer $>$ \&command\+Buffers)
+\begin{DoxyCompactList}\small\item\em Free a set of command buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_pool_ae34747d50dac1595c05a32ecea3c29c8}\label{class_command_pool_ae34747d50dac1595c05a32ecea3c29c8}} 
+Vk\+Command\+Buffer \mbox{\hyperlink{class_command_pool_ae34747d50dac1595c05a32ecea3c29c8}{begin\+Single\+Cmd\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Begin a command buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_pool_a8f22c52f4ce80bd907091158d1c15fe2}\label{class_command_pool_a8f22c52f4ce80bd907091158d1c15fe2}} 
+void \mbox{\hyperlink{class_command_pool_a8f22c52f4ce80bd907091158d1c15fe2}{end\+Single\+Cmd\+Buffer}} (Vk\+Command\+Buffer command\+Buffer)
+\begin{DoxyCompactList}\small\item\em End a particular command buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_command_pool_ab772a0899158511042d5d6a66bc0f8e6}\label{class_command_pool_ab772a0899158511042d5d6a66bc0f8e6}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_command_pool_ab772a0899158511042d5d6a66bc0f8e6}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em A reference to the Vulkan Context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_command_pool_abbc29e014077eb50d066364ac376ef96}\label{class_command_pool_abbc29e014077eb50d066364ac376ef96}} 
+Vk\+Command\+Pool \mbox{\hyperlink{class_command_pool_abbc29e014077eb50d066364ac376ef96}{m\+Command\+Pool}}
+\begin{DoxyCompactList}\small\item\em The Command Pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allocation and management of Command Buffers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_command_pool_ace23b24c2f86842645c6c371edba8df5}\label{class_command_pool_ace23b24c2f86842645c6c371edba8df5}} 
+\index{CommandPool@{CommandPool}!CommandPool@{CommandPool}}
+\index{CommandPool@{CommandPool}!CommandPool@{CommandPool}}
+\subsubsection{\texorpdfstring{CommandPool()}{CommandPool()}}
+{\footnotesize\ttfamily Command\+Pool\+::\+Command\+Pool (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Vulkan Context to operate within \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_command_pool_a333fb2b62823ad527f263bc0b8a72d4e}\label{class_command_pool_a333fb2b62823ad527f263bc0b8a72d4e}} 
+\index{CommandPool@{CommandPool}!allocateCommandBuffers@{allocateCommandBuffers}}
+\index{allocateCommandBuffers@{allocateCommandBuffers}!CommandPool@{CommandPool}}
+\subsubsection{\texorpdfstring{allocateCommandBuffers()}{allocateCommandBuffers()}}
+{\footnotesize\ttfamily void Command\+Pool\+::allocate\+Command\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Vk\+Command\+Buffer $>$ \&}]{command\+Buffers,  }\item[{Vk\+Command\+Buffer\+Level}]{level }\end{DoxyParamCaption})}
+
+
+
+Allocate command buffers from the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffers} & The set of command buffers to be allocated \\
+\hline
+{\em level} & The level of the command buffers (primary or secondary) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_pool_a556f939f99a7044cc9e3292750c8a749}\label{class_command_pool_a556f939f99a7044cc9e3292750c8a749}} 
+\index{CommandPool@{CommandPool}!freeCommandBuffers@{freeCommandBuffers}}
+\index{freeCommandBuffers@{freeCommandBuffers}!CommandPool@{CommandPool}}
+\subsubsection{\texorpdfstring{freeCommandBuffers()}{freeCommandBuffers()}}
+{\footnotesize\ttfamily void Command\+Pool\+::free\+Command\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Vk\+Command\+Buffer $>$ \&}]{command\+Buffers }\end{DoxyParamCaption})}
+
+
+
+Free a set of command buffers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffers} & The set of command buffers to be freed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Command\+Pool.\+h\item 
+src/Command\+Pool.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{struct_shader_set}{}\section{Shader\+Set Class Reference}
+\label{struct_shader_set}\index{ShaderSet@{ShaderSet}}
+
+
+A Set of shaders to be used in a pipeline.  
+
+
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_shader_set_a47ae8e4def7b8ca54b395b9beb276cd6}\label{struct_shader_set_a47ae8e4def7b8ca54b395b9beb276cd6}} 
+std\+::vector$<$ Vk\+Pipeline\+Shader\+Stage\+Create\+Info $>$ \mbox{\hyperlink{struct_shader_set_a47ae8e4def7b8ca54b395b9beb276cd6}{create\+Shader\+Info\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Creates a Vk\+Shader\+Info\+Set object based on the shaders used in this set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_shader_set_a42e4d7883cc499b15fb6f9d93ec1ab30}\label{struct_shader_set_a42e4d7883cc499b15fb6f9d93ec1ab30}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \mbox{\hyperlink{struct_shader_set_a42e4d7883cc499b15fb6f9d93ec1ab30}{vert\+Shader}} = nullptr
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_vertex}{Vertex}} \mbox{\hyperlink{class_shader}{Shader}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_shader_set_ac92117d329dc06bc90c1d540dcbc9251}\label{struct_shader_set_ac92117d329dc06bc90c1d540dcbc9251}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \mbox{\hyperlink{struct_shader_set_ac92117d329dc06bc90c1d540dcbc9251}{tess\+Control\+Shader}} = nullptr
+\begin{DoxyCompactList}\small\item\em Tessellation Control \mbox{\hyperlink{class_shader}{Shader}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_shader_set_af05a7762f410cdc3faf5b443b1b4d74a}\label{struct_shader_set_af05a7762f410cdc3faf5b443b1b4d74a}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \mbox{\hyperlink{struct_shader_set_af05a7762f410cdc3faf5b443b1b4d74a}{tess\+Eval\+Shader}} = nullptr
+\begin{DoxyCompactList}\small\item\em Tessellation Evaluation \mbox{\hyperlink{class_shader}{Shader}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_shader_set_a7cbdaf9695066834067d6c4d5699f52c}\label{struct_shader_set_a7cbdaf9695066834067d6c4d5699f52c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \mbox{\hyperlink{struct_shader_set_a7cbdaf9695066834067d6c4d5699f52c}{geometry\+Shader}} = nullptr
+\begin{DoxyCompactList}\small\item\em Geometry \mbox{\hyperlink{class_shader}{Shader}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_shader_set_afe66532212e734ef5b53783976d29241}\label{struct_shader_set_afe66532212e734ef5b53783976d29241}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \mbox{\hyperlink{struct_shader_set_afe66532212e734ef5b53783976d29241}{frag\+Shader}} = nullptr
+\begin{DoxyCompactList}\small\item\em Fragment \mbox{\hyperlink{class_shader}{Shader}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Set of shaders to be used in a pipeline. 
+
+Contains a pointer for each programmable stage of the pipeline. A value of null indicates that that stage is not used. This struct is used insid
+
+\begin{DoxyAuthor}{Author}
+Nicholas Carpenetti
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20 July 2018 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Shader.\+h\end{DoxyCompactItemize}

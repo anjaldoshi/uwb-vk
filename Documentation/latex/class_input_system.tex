@@ -1,0 +1,396 @@
+\hypertarget{class_input_system}{}\section{Input\+System Class Reference}
+\label{class_input_system}\index{InputSystem@{InputSystem}}
+
+
+Input handling using G\+L\+FW.  
+
+
+
+
+{\ttfamily \#include $<$Input\+System.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_input_system_a2f18d9fdb44805c63984113c1433c223}\label{class_input_system_a2f18d9fdb44805c63984113c1433c223}} 
+\mbox{\hyperlink{class_input_system_a2f18d9fdb44805c63984113c1433c223}{Input\+System}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_system_aefb9cb14b783824b3b881ead2812b695}{initialize}} (G\+L\+F\+Wwindow $\ast$window)
+\begin{DoxyCompactList}\small\item\em Initialize the Input System. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_aeb2d30a71d7dc462258febd00ea77ea3}\label{class_input_system_aeb2d30a71d7dc462258febd00ea77ea3}} 
+void \mbox{\hyperlink{class_input_system_aeb2d30a71d7dc462258febd00ea77ea3}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the input states. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_system_aa7758990eeeebe5a42fc79116ee60983}{is\+Key\+Down}} (int key)
+\begin{DoxyCompactList}\small\item\em Check if a particular keyboard key is down. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_system_a1518b44c6d45b3fb9a03e9fdad59eb67}{is\+Key\+Pressed}} (int key)
+\begin{DoxyCompactList}\small\item\em Check if a particular key has been pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_system_aa5958921b6cd8d711a3c49b358ec8e90}{is\+Key\+Released}} (int key)
+\begin{DoxyCompactList}\small\item\em Check if a particular key has been released. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_system_ae7d3e90aaf6ba8a070f660f25997a2bb}{is\+Mouse\+Down}} (int button)
+\begin{DoxyCompactList}\small\item\em Check if a particular mouse button is down. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_system_a0d8c4979a46e2858d3f351cfcf755757}{is\+Mouse\+Pressed}} (int button)
+\begin{DoxyCompactList}\small\item\em Check if a particular mouse button has been presssed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_system_ae32725811a1db2b5a72974773b8d1ef8}{is\+Mouse\+Released}} (int button)
+\begin{DoxyCompactList}\small\item\em Check if a particular mouse button has been released. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_a7bf6931374d71d95f551582574adcd92}\label{class_input_system_a7bf6931374d71d95f551582574adcd92}} 
+glm\+::vec3 \mbox{\hyperlink{class_input_system_a7bf6931374d71d95f551582574adcd92}{get\+Mouse\+Delta}} ()
+\begin{DoxyCompactList}\small\item\em Get the Delta position of the mouse in a vec3. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_aab61f34247a3c1bf0070752d83fc8fd1}\label{class_input_system_aab61f34247a3c1bf0070752d83fc8fd1}} 
+glm\+::vec3 \mbox{\hyperlink{class_input_system_aab61f34247a3c1bf0070752d83fc8fd1}{get\+Mouse\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Get the Current position of the mouse in a vec3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_input_system_a7bcc073212eb102a79d0ec81017662c1}\label{class_input_system_a7bcc073212eb102a79d0ec81017662c1}} 
+void \mbox{\hyperlink{class_input_system_a7bcc073212eb102a79d0ec81017662c1}{set\+Event\+Handling}} ()
+\begin{DoxyCompactList}\small\item\em set the static variable instance used by the dispatch methods \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_system_a5d560cf5c979be4ef7ddd176e5adfda2}{key\+Callback}} (G\+L\+F\+Wwindow $\ast$window, int key, int scancode, int action, int mods)
+\begin{DoxyCompactList}\small\item\em callback for the keyboard \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_system_a99b450620611f7848abe17168a07b903}{mouse\+Button\+Callback}} (G\+L\+F\+Wwindow $\ast$window, int button, int action, int mods)
+\begin{DoxyCompactList}\small\item\em callback for the mouse buttons \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_system_a9a96ec09226bd475878d3d9e2667bb3b}{mouse\+Cursor\+Callback}} (G\+L\+F\+Wwindow $\ast$window, double xpos, double ypos)
+\begin{DoxyCompactList}\small\item\em callback for mouse movement (x and y only) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_system_adff4716530b70b0378f03c3c28b76599}{mouse\+Scroll\+Callback}} (G\+L\+F\+Wwindow $\ast$window, double xoffset, double yoffset)
+\begin{DoxyCompactList}\small\item\em callback for mouse scroll \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_input_system_af0dc23d1ab45a68a0b73733240b67ddf}{dispatch\+Key\+Callback}} (G\+L\+F\+Wwindow $\ast$window, int key, int scancode, int action, int mods)
+\begin{DoxyCompactList}\small\item\em callback dispatching for the keyboard \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_system_ab63ca4e56f93c7272b2029f9abb68ad0}{dispatch\+Mouse\+Button\+Callback}} (G\+L\+F\+Wwindow $\ast$window, int button, int action, int mods)
+\begin{DoxyCompactList}\small\item\em callback dispatching for the mouse buttons \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_system_acf36cab1c6777a88af30b2afb57e31b1}{dispatch\+Mouse\+Pos\+Callback}} (G\+L\+F\+Wwindow $\ast$window, double xpos, double ypos)
+\begin{DoxyCompactList}\small\item\em callback dispatching for mouse movement (x and y only) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_system_af5bbb69061e74c6ea81d17d8657304c3}{dispatch\+Mouse\+Scroll\+Callback}} (G\+L\+F\+Wwindow $\ast$window, double xoffset, double yoffset)
+\begin{DoxyCompactList}\small\item\em callback dispatching for mouse scroll \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_input_system_a01b068005a19c8173c7b42c1a0458620}\label{class_input_system_a01b068005a19c8173c7b42c1a0458620}} 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{class_input_system_a01b068005a19c8173c7b42c1a0458620}{m\+Window}} = nullptr
+\begin{DoxyCompactList}\small\item\em The G\+L\+FW window we are receiving input events from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_af0c9b1e6ea8b2eae77f6e928b551195e}\label{class_input_system_af0c9b1e6ea8b2eae77f6e928b551195e}} 
+bool \mbox{\hyperlink{class_input_system_af0c9b1e6ea8b2eae77f6e928b551195e}{m\+Key\+Down}} \mbox{[}G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Current key states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_a611d4a9d716e4b6b0a42fa188628b063}\label{class_input_system_a611d4a9d716e4b6b0a42fa188628b063}} 
+bool \mbox{\hyperlink{class_input_system_a611d4a9d716e4b6b0a42fa188628b063}{m\+Key\+Prev}} \mbox{[}G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Previous key states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_ab15cffa17c0cc8c132a8baa1a8d0d94e}\label{class_input_system_ab15cffa17c0cc8c132a8baa1a8d0d94e}} 
+bool \mbox{\hyperlink{class_input_system_ab15cffa17c0cc8c132a8baa1a8d0d94e}{m\+Key\+Pressed}} \mbox{[}G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Key pressed states (i.\+e. previously up, now down) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_aabf86f9a2e9ca112ee4a794d62e63d8d}\label{class_input_system_aabf86f9a2e9ca112ee4a794d62e63d8d}} 
+bool \mbox{\hyperlink{class_input_system_aabf86f9a2e9ca112ee4a794d62e63d8d}{m\+Key\+Released}} \mbox{[}G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Key released states (i.\+e. previously down, now up) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_ae0cba198a2b2dce3f1d5e4cb3e7ef50d}\label{class_input_system_ae0cba198a2b2dce3f1d5e4cb3e7ef50d}} 
+bool \mbox{\hyperlink{class_input_system_ae0cba198a2b2dce3f1d5e4cb3e7ef50d}{m\+Mouse\+Down}} \mbox{[}G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Current Mouse button states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_ab7e824a8e0add445f9a25fe0540aa277}\label{class_input_system_ab7e824a8e0add445f9a25fe0540aa277}} 
+bool \mbox{\hyperlink{class_input_system_ab7e824a8e0add445f9a25fe0540aa277}{m\+Mouse\+Prev}} \mbox{[}G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Previous mouse button states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_a6c1e27e4e82f9852fa914787a3aeadf7}\label{class_input_system_a6c1e27e4e82f9852fa914787a3aeadf7}} 
+bool \mbox{\hyperlink{class_input_system_a6c1e27e4e82f9852fa914787a3aeadf7}{m\+Mouse\+Pressed}} \mbox{[}G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Moused button pressed states (i.\+e. previously up, now down) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_af4ab8aef06c733ac739401d43e938304}\label{class_input_system_af4ab8aef06c733ac739401d43e938304}} 
+bool \mbox{\hyperlink{class_input_system_af4ab8aef06c733ac739401d43e938304}{m\+Mouse\+Released}} \mbox{[}G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+A\+ST\mbox{]}
+\begin{DoxyCompactList}\small\item\em Moused button released states (i.\+e. previously down, now up) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_ad38bf5cd99c3513e86e8f1fc1ddaa333}\label{class_input_system_ad38bf5cd99c3513e86e8f1fc1ddaa333}} 
+glm\+::vec3 \mbox{\hyperlink{class_input_system_ad38bf5cd99c3513e86e8f1fc1ddaa333}{m\+Cursor\+Pos}}
+\begin{DoxyCompactList}\small\item\em Cursor position (x and y are screen coordinates, z is scroll position) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_a43d50f5c3616d480923c91d49fb6a896}\label{class_input_system_a43d50f5c3616d480923c91d49fb6a896}} 
+glm\+::vec3 \mbox{\hyperlink{class_input_system_a43d50f5c3616d480923c91d49fb6a896}{m\+Prev\+Cursor\+Pos}}
+\begin{DoxyCompactList}\small\item\em Previous cursor position (x and y are screen coordinates, z is scroll position) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_a36fd19cacfd8d662215fae1d711b9e18}\label{class_input_system_a36fd19cacfd8d662215fae1d711b9e18}} 
+glm\+::vec3 \mbox{\hyperlink{class_input_system_a36fd19cacfd8d662215fae1d711b9e18}{m\+Delta\+Cursor\+Pos}}
+\begin{DoxyCompactList}\small\item\em Delta curor position (x and y are screen coordinates, z is scroll position) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_input_system_a6354ba0247aa54692982ec6066b328c7}\label{class_input_system_a6354ba0247aa54692982ec6066b328c7}} 
+bool \mbox{\hyperlink{class_input_system_a6354ba0247aa54692982ec6066b328c7}{cursor\+Set}} = false
+\begin{DoxyCompactList}\small\item\em Whether the cursor position has already been set. This prevents issues with the delta cursor position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_input_system_a343fb827cca558fb4e2535be1df4e97d}\label{class_input_system_a343fb827cca558fb4e2535be1df4e97d}} 
+static \mbox{\hyperlink{class_input_system}{Input\+System}} $\ast$ \mbox{\hyperlink{class_input_system_a343fb827cca558fb4e2535be1df4e97d}{m\+Event\+Handle\+Instance}}
+\begin{DoxyCompactList}\small\item\em A handle to the. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Input handling using G\+L\+FW. 
+
+This class handles all of the inputs recieved from windows through G\+L\+FW. Down states, pressed states, and release states for both mouse and keyboard can be queried. Note\+: in addition to the standard G\+L\+FW callbacks, this class uses dispatch methods as G\+L\+FW can only use static methods for the callback. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_system_af0dc23d1ab45a68a0b73733240b67ddf}\label{class_input_system_af0dc23d1ab45a68a0b73733240b67ddf}} 
+\index{InputSystem@{InputSystem}!dispatchKeyCallback@{dispatchKeyCallback}}
+\index{dispatchKeyCallback@{dispatchKeyCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{dispatchKeyCallback()}{dispatchKeyCallback()}}
+{\footnotesize\ttfamily static void Input\+System\+::dispatch\+Key\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+callback dispatching for the keyboard 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em key} & The key associated with the event \\
+\hline
+{\em scancode} & A system specific scancode of the key \\
+\hline
+{\em action} & The key action asssociated with the event (i.\+e. G\+L\+F\+W\+\_\+\+P\+R\+E\+SS, G\+L\+F\+W\+\_\+\+R\+E\+L\+E\+A\+SE, etc.) \\
+\hline
+{\em mods} & A bitfield describing which modifier keys are held down \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_ab63ca4e56f93c7272b2029f9abb68ad0}\label{class_input_system_ab63ca4e56f93c7272b2029f9abb68ad0}} 
+\index{InputSystem@{InputSystem}!dispatchMouseButtonCallback@{dispatchMouseButtonCallback}}
+\index{dispatchMouseButtonCallback@{dispatchMouseButtonCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{dispatchMouseButtonCallback()}{dispatchMouseButtonCallback()}}
+{\footnotesize\ttfamily static void Input\+System\+::dispatch\+Mouse\+Button\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+callback dispatching for the mouse buttons 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em button} & The button associated with the event \\
+\hline
+{\em action} & The mouse button action asssociated with the event (i.\+e. G\+L\+F\+W\+\_\+\+P\+R\+E\+SS, G\+L\+F\+W\+\_\+\+R\+E\+L\+E\+A\+SE, etc.) \\
+\hline
+{\em mods} & A bitfield describing which modifier buttons are held down \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_acf36cab1c6777a88af30b2afb57e31b1}\label{class_input_system_acf36cab1c6777a88af30b2afb57e31b1}} 
+\index{InputSystem@{InputSystem}!dispatchMousePosCallback@{dispatchMousePosCallback}}
+\index{dispatchMousePosCallback@{dispatchMousePosCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{dispatchMousePosCallback()}{dispatchMousePosCallback()}}
+{\footnotesize\ttfamily static void Input\+System\+::dispatch\+Mouse\+Pos\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+callback dispatching for mouse movement (x and y only) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em xpos} & The x-\/coordinate of the mouse position \\
+\hline
+{\em ypos} & The y-\/coordinate of the mouse position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_af5bbb69061e74c6ea81d17d8657304c3}\label{class_input_system_af5bbb69061e74c6ea81d17d8657304c3}} 
+\index{InputSystem@{InputSystem}!dispatchMouseScrollCallback@{dispatchMouseScrollCallback}}
+\index{dispatchMouseScrollCallback@{dispatchMouseScrollCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{dispatchMouseScrollCallback()}{dispatchMouseScrollCallback()}}
+{\footnotesize\ttfamily static void Input\+System\+::dispatch\+Mouse\+Scroll\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+callback dispatching for mouse scroll 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em xoffset} & The x-\/offset of the mouse scroll button \\
+\hline
+{\em yoffset} & The y-\/offfset of the mouse scroll button \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_aefb9cb14b783824b3b881ead2812b695}\label{class_input_system_aefb9cb14b783824b3b881ead2812b695}} 
+\index{InputSystem@{InputSystem}!initialize@{initialize}}
+\index{initialize@{initialize}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Input\+System\+::initialize (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Initialize the Input System. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & An initialized G\+L\+FW window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_aa7758990eeeebe5a42fc79116ee60983}\label{class_input_system_aa7758990eeeebe5a42fc79116ee60983}} 
+\index{InputSystem@{InputSystem}!isKeyDown@{isKeyDown}}
+\index{isKeyDown@{isKeyDown}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{isKeyDown()}{isKeyDown()}}
+{\footnotesize\ttfamily bool Input\+System\+::is\+Key\+Down (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+Check if a particular keyboard key is down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & to query (glfw key name convention is G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+$<$key name$>$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_a1518b44c6d45b3fb9a03e9fdad59eb67}\label{class_input_system_a1518b44c6d45b3fb9a03e9fdad59eb67}} 
+\index{InputSystem@{InputSystem}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily bool Input\+System\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+Check if a particular key has been pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key to query (glfw key name convention is G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+$<$key name$>$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_aa5958921b6cd8d711a3c49b358ec8e90}\label{class_input_system_aa5958921b6cd8d711a3c49b358ec8e90}} 
+\index{InputSystem@{InputSystem}!isKeyReleased@{isKeyReleased}}
+\index{isKeyReleased@{isKeyReleased}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{isKeyReleased()}{isKeyReleased()}}
+{\footnotesize\ttfamily bool Input\+System\+::is\+Key\+Released (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+Check if a particular key has been released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key to query (glfw key name convention is G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+$<$key name$>$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_ae7d3e90aaf6ba8a070f660f25997a2bb}\label{class_input_system_ae7d3e90aaf6ba8a070f660f25997a2bb}} 
+\index{InputSystem@{InputSystem}!isMouseDown@{isMouseDown}}
+\index{isMouseDown@{isMouseDown}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{isMouseDown()}{isMouseDown()}}
+{\footnotesize\ttfamily bool Input\+System\+::is\+Mouse\+Down (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})}
+
+
+
+Check if a particular mouse button is down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Button to query (glfw key name convention is G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+$<$key name$>$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_a0d8c4979a46e2858d3f351cfcf755757}\label{class_input_system_a0d8c4979a46e2858d3f351cfcf755757}} 
+\index{InputSystem@{InputSystem}!isMousePressed@{isMousePressed}}
+\index{isMousePressed@{isMousePressed}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{isMousePressed()}{isMousePressed()}}
+{\footnotesize\ttfamily bool Input\+System\+::is\+Mouse\+Pressed (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})}
+
+
+
+Check if a particular mouse button has been presssed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Button to query (glfw key name convention is G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+$<$key name$>$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_ae32725811a1db2b5a72974773b8d1ef8}\label{class_input_system_ae32725811a1db2b5a72974773b8d1ef8}} 
+\index{InputSystem@{InputSystem}!isMouseReleased@{isMouseReleased}}
+\index{isMouseReleased@{isMouseReleased}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{isMouseReleased()}{isMouseReleased()}}
+{\footnotesize\ttfamily bool Input\+System\+::is\+Mouse\+Released (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})}
+
+
+
+Check if a particular mouse button has been released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Button to query (glfw key name convention is G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+$<$key name$>$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_a5d560cf5c979be4ef7ddd176e5adfda2}\label{class_input_system_a5d560cf5c979be4ef7ddd176e5adfda2}} 
+\index{InputSystem@{InputSystem}!keyCallback@{keyCallback}}
+\index{keyCallback@{keyCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{keyCallback()}{keyCallback()}}
+{\footnotesize\ttfamily void Input\+System\+::key\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+callback for the keyboard 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em key} & The key associated with the event \\
+\hline
+{\em scancode} & A system specific scancode of the key \\
+\hline
+{\em action} & The key action asssociated with the event (i.\+e. G\+L\+F\+W\+\_\+\+P\+R\+E\+SS, G\+L\+F\+W\+\_\+\+R\+E\+L\+E\+A\+SE, etc.) \\
+\hline
+{\em mods} & A bitfield describing which modifier keys are held down \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_a99b450620611f7848abe17168a07b903}\label{class_input_system_a99b450620611f7848abe17168a07b903}} 
+\index{InputSystem@{InputSystem}!mouseButtonCallback@{mouseButtonCallback}}
+\index{mouseButtonCallback@{mouseButtonCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{mouseButtonCallback()}{mouseButtonCallback()}}
+{\footnotesize\ttfamily void Input\+System\+::mouse\+Button\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+callback for the mouse buttons 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em button} & The button associated with the event \\
+\hline
+{\em action} & The mouse button action asssociated with the event (i.\+e. G\+L\+F\+W\+\_\+\+P\+R\+E\+SS, G\+L\+F\+W\+\_\+\+R\+E\+L\+E\+A\+SE, etc.) \\
+\hline
+{\em mods} & A bitfield describing which modifier buttons are held down \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_a9a96ec09226bd475878d3d9e2667bb3b}\label{class_input_system_a9a96ec09226bd475878d3d9e2667bb3b}} 
+\index{InputSystem@{InputSystem}!mouseCursorCallback@{mouseCursorCallback}}
+\index{mouseCursorCallback@{mouseCursorCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{mouseCursorCallback()}{mouseCursorCallback()}}
+{\footnotesize\ttfamily void Input\+System\+::mouse\+Cursor\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+callback for mouse movement (x and y only) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em xpos} & The x-\/coordinate of the mouse position \\
+\hline
+{\em ypos} & The y-\/coordinate of the mouse position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_input_system_adff4716530b70b0378f03c3c28b76599}\label{class_input_system_adff4716530b70b0378f03c3c28b76599}} 
+\index{InputSystem@{InputSystem}!mouseScrollCallback@{mouseScrollCallback}}
+\index{mouseScrollCallback@{mouseScrollCallback}!InputSystem@{InputSystem}}
+\subsubsection{\texorpdfstring{mouseScrollCallback()}{mouseScrollCallback()}}
+{\footnotesize\ttfamily void Input\+System\+::mouse\+Scroll\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+callback for mouse scroll 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The G\+L\+FW window triggering the event \\
+\hline
+{\em xoffset} & The x-\/offset of the mouse scroll button \\
+\hline
+{\em yoffset} & The y-\/offfset of the mouse scroll button \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Input\+System.\+h\item 
+src/Input\+System.\+cpp\end{DoxyCompactItemize}

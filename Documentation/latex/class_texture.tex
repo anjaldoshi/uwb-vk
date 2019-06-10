@@ -1,0 +1,150 @@
+\hypertarget{class_texture}{}\section{Texture Class Reference}
+\label{class_texture}\index{Texture@{Texture}}
+
+
+A class for holding the information loaded from texture files.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture_a43b83bcb12e9dc66bd799de3a2ebee63}{Texture}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} $>$ buffer\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_manager}{Image\+Manager}} $>$ image\+Manager)
+\item 
+\mbox{\hyperlink{class_texture}{Texture}} \& \mbox{\hyperlink{class_texture_a05be73b0042571238a897214d8b0d9a0}{load}} (unsigned char $\ast$data, int width, int height, int channels)
+\begin{DoxyCompactList}\small\item\em load raw image data into this texture \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a46d06aec832e5a954f1c8ca957c2c6e5}\label{class_texture_a46d06aec832e5a954f1c8ca957c2c6e5}} 
+void \mbox{\hyperlink{class_texture_a46d06aec832e5a954f1c8ca957c2c6e5}{free}} ()
+\begin{DoxyCompactList}\small\item\em Free the Vulkan resources allocated for this texture. \end{DoxyCompactList}\item 
+Vk\+Image\+View \mbox{\hyperlink{class_texture_ae1304d0849bad6d745794edff547fbed}{get\+Image\+View}} () const
+\item 
+Vk\+Sampler \mbox{\hyperlink{class_texture_ac84290121b3faf715445b4905140647d}{get\+Sampler}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_texture_a1dca34523d388fef051bbb0234e91047}{create\+Texture\+Image}} (unsigned char $\ast$pixel\+Data)
+\begin{DoxyCompactList}\small\item\em create a Vk\+Image object from the pixel data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a4650712e72f3873cc026ed58afaf32cb}\label{class_texture_a4650712e72f3873cc026ed58afaf32cb}} 
+void \mbox{\hyperlink{class_texture_a4650712e72f3873cc026ed58afaf32cb}{create\+Texture\+Image\+View}} ()
+\begin{DoxyCompactList}\small\item\em Create a Vk\+Image\+View object for accessing the Vk\+Image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a837fe912636615bca8b9a2e8fb340daf}\label{class_texture_a837fe912636615bca8b9a2e8fb340daf}} 
+void \mbox{\hyperlink{class_texture_a837fe912636615bca8b9a2e8fb340daf}{create\+Texture\+Sampler}} ()
+\begin{DoxyCompactList}\small\item\em Create a Vk\+Sampler object for access inside shaders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_texture_a400f584bf6d9c42946c560eb7e68291e}\label{class_texture_a400f584bf6d9c42946c560eb7e68291e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_texture_a400f584bf6d9c42946c560eb7e68291e}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em A shared pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a11f2e25c15d0e11b7469eb7c24497a04}\label{class_texture_a11f2e25c15d0e11b7469eb7c24497a04}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} $>$ \mbox{\hyperlink{class_texture_a11f2e25c15d0e11b7469eb7c24497a04}{m\+Buffer\+Manager}}
+\begin{DoxyCompactList}\small\item\em A shared pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a976fb90446c3b4b919274ac1442c5d58}\label{class_texture_a976fb90446c3b4b919274ac1442c5d58}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_manager}{Image\+Manager}} $>$ \mbox{\hyperlink{class_texture_a976fb90446c3b4b919274ac1442c5d58}{m\+Image\+Manager}}
+\begin{DoxyCompactList}\small\item\em A shared pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_image_manager}{Image\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a0e007f4b4f1a314e5b0dae1402a13afb}\label{class_texture_a0e007f4b4f1a314e5b0dae1402a13afb}} 
+int \mbox{\hyperlink{class_texture_a0e007f4b4f1a314e5b0dae1402a13afb}{m\+Width}}
+\begin{DoxyCompactList}\small\item\em The resolution width of the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_ad7078e03c0ef6e69b733eb85fd72aec2}\label{class_texture_ad7078e03c0ef6e69b733eb85fd72aec2}} 
+int \mbox{\hyperlink{class_texture_ad7078e03c0ef6e69b733eb85fd72aec2}{m\+Height}}
+\begin{DoxyCompactList}\small\item\em The resolution height of the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a45ab34f201e8555b754d643e842324cf}\label{class_texture_a45ab34f201e8555b754d643e842324cf}} 
+int \mbox{\hyperlink{class_texture_a45ab34f201e8555b754d643e842324cf}{m\+Channels}}
+\begin{DoxyCompactList}\small\item\em The number of color channels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a16095fcfe6a0297defb8199d3fdecfcf}\label{class_texture_a16095fcfe6a0297defb8199d3fdecfcf}} 
+Vk\+Device\+Size \mbox{\hyperlink{class_texture_a16095fcfe6a0297defb8199d3fdecfcf}{m\+Image\+Size}}
+\begin{DoxyCompactList}\small\item\em The size of the image data in bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a0117e52f6fca5863d2a62942809c5751}\label{class_texture_a0117e52f6fca5863d2a62942809c5751}} 
+Vk\+Image \mbox{\hyperlink{class_texture_a0117e52f6fca5863d2a62942809c5751}{m\+Image}}
+\begin{DoxyCompactList}\small\item\em The Vk\+Image\+Handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a5ec4d26cbfd286764b8f1d664a067ff1}\label{class_texture_a5ec4d26cbfd286764b8f1d664a067ff1}} 
+Vk\+Device\+Memory \mbox{\hyperlink{class_texture_a5ec4d26cbfd286764b8f1d664a067ff1}{m\+Image\+Memory}}
+\begin{DoxyCompactList}\small\item\em A handle to the device memory holding the image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a94e2dabb32c54d68a5beee63f84b5c6e}\label{class_texture_a94e2dabb32c54d68a5beee63f84b5c6e}} 
+Vk\+Image\+View \mbox{\hyperlink{class_texture_a94e2dabb32c54d68a5beee63f84b5c6e}{m\+Image\+View}}
+\begin{DoxyCompactList}\small\item\em A Vulkan Image\+View for the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_texture_a150f91e3241ad30bd79bef7a0c8b62a2}\label{class_texture_a150f91e3241ad30bd79bef7a0c8b62a2}} 
+Vk\+Sampler \mbox{\hyperlink{class_texture_a150f91e3241ad30bd79bef7a0c8b62a2}{m\+Sampler}}
+\begin{DoxyCompactList}\small\item\em A sampler so the image can be used in a shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for holding the information loaded from texture files. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_texture_a43b83bcb12e9dc66bd799de3a2ebee63}\label{class_texture_a43b83bcb12e9dc66bd799de3a2ebee63}} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\subsubsection{\texorpdfstring{Texture()}{Texture()}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} $>$}]{buffer\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_manager}{Image\+Manager}} $>$}]{image\+Manager }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_texture}{Texture}} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em context} & A pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} \\
+\hline
+{\em buffer\+Manager} & A pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s buffer manager \\
+\hline
+{\em image\+Manager} & A pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s image manager \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_texture_a1dca34523d388fef051bbb0234e91047}\label{class_texture_a1dca34523d388fef051bbb0234e91047}} 
+\index{Texture@{Texture}!createTextureImage@{createTextureImage}}
+\index{createTextureImage@{createTextureImage}!Texture@{Texture}}
+\subsubsection{\texorpdfstring{createTextureImage()}{createTextureImage()}}
+{\footnotesize\ttfamily void Texture\+::create\+Texture\+Image (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{pixel\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+create a Vk\+Image object from the pixel data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixel\+Data} & A byte array of pixel data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_texture_ae1304d0849bad6d745794edff547fbed}\label{class_texture_ae1304d0849bad6d745794edff547fbed}} 
+\index{Texture@{Texture}!getImageView@{getImageView}}
+\index{getImageView@{getImageView}!Texture@{Texture}}
+\subsubsection{\texorpdfstring{getImageView()}{getImageView()}}
+{\footnotesize\ttfamily Vk\+Image\+View Texture\+::get\+Image\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the Vk\+Image\+View object for this texture \mbox{\Hypertarget{class_texture_ac84290121b3faf715445b4905140647d}\label{class_texture_ac84290121b3faf715445b4905140647d}} 
+\index{Texture@{Texture}!getSampler@{getSampler}}
+\index{getSampler@{getSampler}!Texture@{Texture}}
+\subsubsection{\texorpdfstring{getSampler()}{getSampler()}}
+{\footnotesize\ttfamily Vk\+Sampler Texture\+::get\+Sampler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the Vk\+Sampler object for this texture \mbox{\Hypertarget{class_texture_a05be73b0042571238a897214d8b0d9a0}\label{class_texture_a05be73b0042571238a897214d8b0d9a0}} 
+\index{Texture@{Texture}!load@{load}}
+\index{load@{load}!Texture@{Texture}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_texture}{Texture}} \& Texture\+::load (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+
+
+load raw image data into this texture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A byte array of image data \\
+\hline
+{\em width} & The width of the image source in pixels \\
+\hline
+{\em height} & The height of the image source in pixels \\
+\hline
+{\em channels} & The number of color channels in the image source \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Texture.\+h\item 
+src/Texture.\+cpp\end{DoxyCompactItemize}

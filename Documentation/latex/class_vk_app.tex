@@ -1,0 +1,246 @@
+\hypertarget{class_vk_app}{}\section{Vk\+App Class Reference}
+\label{class_vk_app}\index{VkApp@{VkApp}}
+
+
+Main Application class.  
+
+
+
+
+{\ttfamily \#include $<$Vk\+App.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vk_app_a9e3380401e14ea44a22ab9c49c34f22e}\label{class_vk_app_a9e3380401e14ea44a22ab9c49c34f22e}} 
+\mbox{\hyperlink{class_vk_app_a9e3380401e14ea44a22ab9c49c34f22e}{Vk\+App}} ()
+\begin{DoxyCompactList}\small\item\em Main Application Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a43ff054122c5e6b287087bf477963e65}\label{class_vk_app_a43ff054122c5e6b287087bf477963e65}} 
+void \mbox{\hyperlink{class_vk_app_a43ff054122c5e6b287087bf477963e65}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the application Initializes all systems, constructs the scene, runs the main loop, and shuts down all systems. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vk_app_af9b4dc5cc727da69f79669d47a514c5a}{initialize}} (const std\+::string \&app\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a window and Initializes the primary systems. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_aca6045f8d93aeeae6a1ba8cbc5f95fbc}\label{class_vk_app_aca6045f8d93aeeae6a1ba8cbc5f95fbc}} 
+void \mbox{\hyperlink{class_vk_app_aca6045f8d93aeeae6a1ba8cbc5f95fbc}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shuts down primary systems and cleans up resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a6ad700df19a47f87b4adfa6dde09ef49}\label{class_vk_app_a6ad700df19a47f87b4adfa6dde09ef49}} 
+void \mbox{\hyperlink{class_vk_app_a6ad700df19a47f87b4adfa6dde09ef49}{create\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Creates a G\+L\+FW window for the application. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a7ec8d8898e545cb1fd3b7ff1495b1221}\label{class_vk_app_a7ec8d8898e545cb1fd3b7ff1495b1221}} 
+void \mbox{\hyperlink{class_vk_app_a7ec8d8898e545cb1fd3b7ff1495b1221}{handle\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Main Input handling Method Called once per frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a38a29f1dda4fb55f7460cce2cbc0adf9}\label{class_vk_app_a38a29f1dda4fb55f7460cce2cbc0adf9}} 
+void \mbox{\hyperlink{class_vk_app_a38a29f1dda4fb55f7460cce2cbc0adf9}{camera\+Controls}} ()
+\begin{DoxyCompactList}\small\item\em Moves the \mbox{\hyperlink{class_camera}{Camera}} This application implements simple F\+PS controls, but no up-\/down rotation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a938cd4f0332fa8b6c91bca2e8816601d}\label{class_vk_app_a938cd4f0332fa8b6c91bca2e8816601d}} 
+void \mbox{\hyperlink{class_vk_app_a938cd4f0332fa8b6c91bca2e8816601d}{light\+Controls}} ()
+\begin{DoxyCompactList}\small\item\em Controls how the lights move in the scene There are two modes of light movement, indicated by m\+Light\+Orbit In orbit mode, all lights orbit around the origin. Otherwise, the user can select a specific light with the number keys and control the light with arrow keys and \mbox{[}/\mbox{]} (vertical axis) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_aeb618057cd3c8b121ffcff60842067eb}\label{class_vk_app_aeb618057cd3c8b121ffcff60842067eb}} 
+void \mbox{\hyperlink{class_vk_app_aeb618057cd3c8b121ffcff60842067eb}{setup\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Create the camera and give it an initial state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ad91fbd6cab8a4f0ff6cdab87f06818d7}\label{class_vk_app_ad91fbd6cab8a4f0ff6cdab87f06818d7}} 
+void \mbox{\hyperlink{class_vk_app_ad91fbd6cab8a4f0ff6cdab87f06818d7}{setup\+Lights}} ()
+\begin{DoxyCompactList}\small\item\em Create lights for the scene and give them initial state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vk_app_af1a2158abcf0fecfc795a4194a4d042c}{create\+Light\+Indicator}} (uint32\+\_\+t light\+Index)
+\begin{DoxyCompactList}\small\item\em Create a light indicator \mbox{\hyperlink{class_renderable}{Renderable}} for a specific light. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a31152ba8ba4553a63debf0a1c2aed036}\label{class_vk_app_a31152ba8ba4553a63debf0a1c2aed036}} 
+void \mbox{\hyperlink{class_vk_app_a31152ba8ba4553a63debf0a1c2aed036}{create\+Cube}} ()
+\begin{DoxyCompactList}\small\item\em Create a cube to cast shadows of. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ab1b583e2a575aabcdb36e34d620a59ac}\label{class_vk_app_ab1b583e2a575aabcdb36e34d620a59ac}} 
+void \mbox{\hyperlink{class_vk_app_ab1b583e2a575aabcdb36e34d620a59ac}{create\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em Create a ground plane to cast shadows on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vk_app_a3ff7e92225ca0400b637c64082fcdfc9}{update\+M\+V\+P\+Buffer}} (const \mbox{\hyperlink{struct_u_b_o}{U\+BO}} \&mvp\+Buffer, const \mbox{\hyperlink{class_transform}{Transform}} \&renderable\+Xform, const \mbox{\hyperlink{class_camera}{Camera}} \&cam)
+\begin{DoxyCompactList}\small\item\em Update the M\+VP buffer for a particular \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vk_app_a0aade43db97056560fa3bc869423d1cc}{update\+Shadow\+M\+VP}} (const \mbox{\hyperlink{struct_light}{Light}} \&light)
+\begin{DoxyCompactList}\small\item\em updates the M\+VP buffer for a light source and sets the VP buffer for the shadow it casts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vk_app_aa9f3786cdd89c262bdb749aa93a7f40b}\label{class_vk_app_aa9f3786cdd89c262bdb749aa93a7f40b}} 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{class_vk_app_aa9f3786cdd89c262bdb749aa93a7f40b}{m\+Window}}
+\begin{DoxyCompactList}\small\item\em The main window the application runs in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ad510071c768a36d47b1b4f9de79484d2}\label{class_vk_app_ad510071c768a36d47b1b4f9de79484d2}} 
+\mbox{\hyperlink{class_render_system}{Render\+System}} \mbox{\hyperlink{class_vk_app_ad510071c768a36d47b1b4f9de79484d2}{m\+Render\+System}}
+\begin{DoxyCompactList}\small\item\em The System responsible for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ad1f0739f9072e7b9b3c53b8ab96928f6}\label{class_vk_app_ad1f0739f9072e7b9b3c53b8ab96928f6}} 
+\mbox{\hyperlink{class_input_system}{Input\+System}} \mbox{\hyperlink{class_vk_app_ad1f0739f9072e7b9b3c53b8ab96928f6}{m\+Input\+System}}
+\begin{DoxyCompactList}\small\item\em The System responsible for handling input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a0696ebc57902eeab46d6332ae2042a57}\label{class_vk_app_a0696ebc57902eeab46d6332ae2042a57}} 
+float \mbox{\hyperlink{class_vk_app_a0696ebc57902eeab46d6332ae2042a57}{m\+Elapsed\+Time}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Time elapsed since the beginning of the application (in seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ab3245c6f77985d0e800584cd52682354}\label{class_vk_app_ab3245c6f77985d0e800584cd52682354}} 
+float \mbox{\hyperlink{class_vk_app_ab3245c6f77985d0e800584cd52682354}{m\+Prev\+Time}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Time elapsed in the previous frame (in seconds) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a41eb2e5a8085ec8cf975795ed4604334}\label{class_vk_app_a41eb2e5a8085ec8cf975795ed4604334}} 
+float \mbox{\hyperlink{class_vk_app_a41eb2e5a8085ec8cf975795ed4604334}{m\+Frame\+Time}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Time elapsed this frame (in seconds) \end{DoxyCompactList}\item 
+std\+::vector$<$ Vk\+Clear\+Value $>$ \mbox{\hyperlink{class_vk_app_a3a52b89d13e9ef9b0c7fb3176ae95d3a}{clear\+Colors}}
+\begin{DoxyCompactList}\small\item\em An array of clear colors (background colors) you can iterate through with the \textquotesingle{}B\textquotesingle{} Key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a0312eb2a1776b01cc801d62bee5fedb1}\label{class_vk_app_a0312eb2a1776b01cc801d62bee5fedb1}} 
+int \mbox{\hyperlink{class_vk_app_a0312eb2a1776b01cc801d62bee5fedb1}{clear\+Color\+Index}} = 0
+\begin{DoxyCompactList}\small\item\em The index of the currently selected background color. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a4f8cc9c9b0698560ff96048e14a60661}\label{class_vk_app_a4f8cc9c9b0698560ff96048e14a60661}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ \mbox{\hyperlink{class_vk_app_a4f8cc9c9b0698560ff96048e14a60661}{m\+Camera}}
+\begin{DoxyCompactList}\small\item\em A camera object used to view the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ab736b45437e554b1fbe1eda9994fe6ef}\label{class_vk_app_ab736b45437e554b1fbe1eda9994fe6ef}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_vk_app_ab736b45437e554b1fbe1eda9994fe6ef}{m\+Light\+U\+B\+O\+Buffer}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{struct_u_b_o}{U\+BO}} for sending light information to shaders. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a951b5277de9dc1f0e49fee15d3163ae2}\label{class_vk_app_a951b5277de9dc1f0e49fee15d3163ae2}} 
+\mbox{\hyperlink{struct_light_u_b_o}{Light\+U\+BO}} \mbox{\hyperlink{class_vk_app_a951b5277de9dc1f0e49fee15d3163ae2}{m\+Light\+U\+BO}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_light}{Light}} source information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a35d2b6d2ea894f0e83039fadf11a2c84}\label{class_vk_app_a35d2b6d2ea894f0e83039fadf11a2c84}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \mbox{\hyperlink{class_vk_app_a35d2b6d2ea894f0e83039fadf11a2c84}{m\+Cube}}
+\begin{DoxyCompactList}\small\item\em A Cube \mbox{\hyperlink{class_renderable}{Renderable}} in the center of the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a12a39bb69b3bd919c7c6b19b19bbf45d}\label{class_vk_app_a12a39bb69b3bd919c7c6b19b19bbf45d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_vk_app_a12a39bb69b3bd919c7c6b19b19bbf45d}{m\+Cube\+M\+V\+P\+Buffer}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{struct_u_b_o}{U\+BO}} for sending the Cube\textquotesingle{}s M\+VP matrices to the shaders. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a96d9c6abf9797d4de6d07fb84735c814}\label{class_vk_app_a96d9c6abf9797d4de6d07fb84735c814}} 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_vk_app_a96d9c6abf9797d4de6d07fb84735c814}{m\+Cube\+X\+Form}}
+\begin{DoxyCompactList}\small\item\em The Cube\textquotesingle{}s transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a25842bc692794f7f4a5d1c0273e13774}\label{class_vk_app_a25842bc692794f7f4a5d1c0273e13774}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \mbox{\hyperlink{class_vk_app_a25842bc692794f7f4a5d1c0273e13774}{m\+Cube2}}
+\begin{DoxyCompactList}\small\item\em A Cube \mbox{\hyperlink{class_renderable}{Renderable}} in the center of the scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a6db469d61314b679beabb604824932ef}\label{class_vk_app_a6db469d61314b679beabb604824932ef}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_vk_app_a6db469d61314b679beabb604824932ef}{m\+Cube2\+M\+V\+P\+Buffer}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{struct_u_b_o}{U\+BO}} for sending the Cube\textquotesingle{}s M\+VP matrices to the shaders. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_aa1c83bb47937d6b3db19b135d0781c57}\label{class_vk_app_aa1c83bb47937d6b3db19b135d0781c57}} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries m\+Cube2\+X\+Form}
+\item 
+\mbox{\Hypertarget{class_vk_app_a1cac161b8b3a1ac8b7a373917725e193}\label{class_vk_app_a1cac161b8b3a1ac8b7a373917725e193}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \mbox{\hyperlink{class_vk_app_a1cac161b8b3a1ac8b7a373917725e193}{m\+Ground}}
+\begin{DoxyCompactList}\small\item\em A Ground \mbox{\hyperlink{class_renderable}{Renderable}} to project shadows on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ab21c11018f6008ee9f5ca96f17ad4423}\label{class_vk_app_ab21c11018f6008ee9f5ca96f17ad4423}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_vk_app_ab21c11018f6008ee9f5ca96f17ad4423}{m\+Ground\+M\+V\+P\+Buffer}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{struct_u_b_o}{U\+BO}} for sending the ground\textquotesingle{}s M\+VP matrices to the shaders. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a8d10ba1a77678a02cfcee820e176a0f8}\label{class_vk_app_a8d10ba1a77678a02cfcee820e176a0f8}} 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_vk_app_a8d10ba1a77678a02cfcee820e176a0f8}{m\+Ground\+X\+Form}}
+\begin{DoxyCompactList}\small\item\em The ground\textquotesingle{}s transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_abc2f36606bc8913aeba7878dead43e37}\label{class_vk_app_abc2f36606bc8913aeba7878dead43e37}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_vk_app_abc2f36606bc8913aeba7878dead43e37}{m\+Shadow\+V\+P\+Buffer}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{struct_u_b_o}{U\+BO}} for holding sending information about the shadow projection to make a shadow map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a3cbb2ec1f9aed246a8fa86044fa29011}\label{class_vk_app_a3cbb2ec1f9aed246a8fa86044fa29011}} 
+glm\+::mat4 \mbox{\hyperlink{class_vk_app_a3cbb2ec1f9aed246a8fa86044fa29011}{m\+Shadow\+VP}}
+\begin{DoxyCompactList}\small\item\em A View+\+Projection matrix for projecting shadows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_af990851ec3658757a00557c1d9776360}\label{class_vk_app_af990851ec3658757a00557c1d9776360}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \mbox{\hyperlink{class_vk_app_af990851ec3658757a00557c1d9776360}{m\+Light\+Indicators}} \mbox{[}M\+A\+X\+\_\+\+L\+I\+G\+H\+TS\mbox{]}
+\begin{DoxyCompactList}\small\item\em A Set of renderables indicating where light sources are. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_aa1a0a3f336f638cb541dc830f262540a}\label{class_vk_app_aa1a0a3f336f638cb541dc830f262540a}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_vk_app_aa1a0a3f336f638cb541dc830f262540a}{m\+Light\+Indicator\+M\+V\+P\+Buffer}} \mbox{[}M\+A\+X\+\_\+\+L\+I\+G\+H\+TS\mbox{]}
+\begin{DoxyCompactList}\small\item\em M\+VP matrices for each of the light indicator renderables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a2c28c300b2c21900185bb56f2d37993c}\label{class_vk_app_a2c28c300b2c21900185bb56f2d37993c}} 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_vk_app_a2c28c300b2c21900185bb56f2d37993c}{m\+Light\+Indicator\+X\+Form}} \mbox{[}M\+A\+X\+\_\+\+L\+I\+G\+H\+TS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Transforms for each light indicator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_affbae41c27d18335e67dc939bf69f123}\label{class_vk_app_affbae41c27d18335e67dc939bf69f123}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_vk_app_affbae41c27d18335e67dc939bf69f123}{m\+Light\+Indicator\+Light\+Buffer}} \mbox{[}M\+A\+X\+\_\+\+L\+I\+G\+H\+TS\mbox{]}
+\begin{DoxyCompactList}\small\item\em U\+B\+Os for each of the \mbox{\hyperlink{struct_light}{Light}} indicator M\+VP matrices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_ade4033211b5afdbe2ffbabbbe881ec9f}\label{class_vk_app_ade4033211b5afdbe2ffbabbbe881ec9f}} 
+bool \mbox{\hyperlink{class_vk_app_ade4033211b5afdbe2ffbabbbe881ec9f}{m\+Light\+Orbit}} = true
+\begin{DoxyCompactList}\small\item\em If the light source is in orbit mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a50483139f52894d3583aacd62222d716}\label{class_vk_app_a50483139f52894d3583aacd62222d716}} 
+uint32\+\_\+t \mbox{\hyperlink{class_vk_app_a50483139f52894d3583aacd62222d716}{m\+Selected\+Light}} = 0
+\begin{DoxyCompactList}\small\item\em The index of the selected light. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vk_app_a02576dbbd682724706ea51c4e47c663f}\label{class_vk_app_a02576dbbd682724706ea51c4e47c663f}} 
+uint32\+\_\+t \mbox{\hyperlink{class_vk_app_a02576dbbd682724706ea51c4e47c663f}{m\+Total\+Lights}} = 0
+\begin{DoxyCompactList}\small\item\em The total number of lights used in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main Application class. 
+
+Unique for every project, but shared among all of them are the creation of \textbackslash{} the primary systems, creation of a scene, a main loop, and shutdown of all systems. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vk_app_af1a2158abcf0fecfc795a4194a4d042c}\label{class_vk_app_af1a2158abcf0fecfc795a4194a4d042c}} 
+\index{VkApp@{VkApp}!createLightIndicator@{createLightIndicator}}
+\index{createLightIndicator@{createLightIndicator}!VkApp@{VkApp}}
+\subsubsection{\texorpdfstring{createLightIndicator()}{createLightIndicator()}}
+{\footnotesize\ttfamily void Vk\+App\+::create\+Light\+Indicator (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{light\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a light indicator \mbox{\hyperlink{class_renderable}{Renderable}} for a specific light. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light\+Index} & the index of the light the indicator corresponds with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vk_app_af9b4dc5cc727da69f79669d47a514c5a}\label{class_vk_app_af9b4dc5cc727da69f79669d47a514c5a}} 
+\index{VkApp@{VkApp}!initialize@{initialize}}
+\index{initialize@{initialize}!VkApp@{VkApp}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Vk\+App\+::initialize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{app\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates a window and Initializes the primary systems. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\+Name} & The name of the application \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vk_app_a3ff7e92225ca0400b637c64082fcdfc9}\label{class_vk_app_a3ff7e92225ca0400b637c64082fcdfc9}} 
+\index{VkApp@{VkApp}!updateMVPBuffer@{updateMVPBuffer}}
+\index{updateMVPBuffer@{updateMVPBuffer}!VkApp@{VkApp}}
+\subsubsection{\texorpdfstring{updateMVPBuffer()}{updateMVPBuffer()}}
+{\footnotesize\ttfamily void Vk\+App\+::update\+M\+V\+P\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_u_b_o}{U\+BO}} \&}]{mvp\+Buffer,  }\item[{const \mbox{\hyperlink{class_transform}{Transform}} \&}]{renderable\+Xform,  }\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{cam }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update the M\+VP buffer for a particular \mbox{\hyperlink{class_renderable}{Renderable}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mvp\+Buffer} & The M\+VP Buffer \mbox{\hyperlink{struct_u_b_o}{U\+BO}} for the \mbox{\hyperlink{class_renderable}{Renderable}} \\
+\hline
+{\em renderable\+Xform} & The \mbox{\hyperlink{class_transform}{Transform}} representing the Renderables state (provides the Model matrix) \\
+\hline
+{\em cam} & The camera viewing the renderable (provides the View and Projection matrices) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vk_app_a0aade43db97056560fa3bc869423d1cc}\label{class_vk_app_a0aade43db97056560fa3bc869423d1cc}} 
+\index{VkApp@{VkApp}!updateShadowMVP@{updateShadowMVP}}
+\index{updateShadowMVP@{updateShadowMVP}!VkApp@{VkApp}}
+\subsubsection{\texorpdfstring{updateShadowMVP()}{updateShadowMVP()}}
+{\footnotesize\ttfamily void Vk\+App\+::update\+Shadow\+M\+VP (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_light}{Light}} \&}]{light }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+updates the M\+VP buffer for a light source and sets the VP buffer for the shadow it casts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & The light casting a shadow \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_vk_app_a3a52b89d13e9ef9b0c7fb3176ae95d3a}\label{class_vk_app_a3a52b89d13e9ef9b0c7fb3176ae95d3a}} 
+\index{VkApp@{VkApp}!clearColors@{clearColors}}
+\index{clearColors@{clearColors}!VkApp@{VkApp}}
+\subsubsection{\texorpdfstring{clearColors}{clearColors}}
+{\footnotesize\ttfamily std\+::vector$<$Vk\+Clear\+Value$>$ Vk\+App\+::clear\+Colors\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ \{0.176f, 0.11f,  0.114f, 1.0f\},}
+\DoxyCodeLine{                                              \{0.937f, 0.749f, 0.376f, 1.0f\},}
+\DoxyCodeLine{                                              \{0.788f, 0.2f,   0.125f, 1.0f\},}
+\DoxyCodeLine{                                              \{0.0f,   0.0f,   0.0f,   1.0f\} \}}
+
+\end{DoxyCode}
+
+
+An array of clear colors (background colors) you can iterate through with the \textquotesingle{}B\textquotesingle{} Key. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Vk\+App.\+h\item 
+src/Vk\+App.\+cpp\end{DoxyCompactItemize}

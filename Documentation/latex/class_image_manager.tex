@@ -1,0 +1,170 @@
+\hypertarget{class_image_manager}{}\section{Image\+Manager Class Reference}
+\label{class_image_manager}\index{ImageManager@{ImageManager}}
+
+
+Allocation and Management of Vk\+Image objects.  
+
+
+
+
+{\ttfamily \#include $<$Image\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_image_manager_adc24d10b860e7d33641636267e0e5e85}{Image\+Manager}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_command_pool}{Command\+Pool}} $>$ command\+Pool)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_manager_aba1591b66357882bb624595bb61fa059}{create\+Image}} (uint32\+\_\+t width, uint32\+\_\+t height, Vk\+Format format, Vk\+Image\+Tiling tiling, Vk\+Image\+Usage\+Flags usage, Vk\+Memory\+Property\+Flags properties, Vk\+Image \&image, Vk\+Device\+Memory \&image\+Memory)
+\begin{DoxyCompactList}\small\item\em Create a new Vk\+Image object. \end{DoxyCompactList}\item 
+Vk\+Image\+View \mbox{\hyperlink{class_image_manager_a9a8948059660e956685b90bb8d5ba9f1}{create\+Image\+View}} (Vk\+Image image, Vk\+Format image\+Format, Vk\+Image\+Aspect\+Flags aspect\+Flags)
+\begin{DoxyCompactList}\small\item\em Create a new Vk\+Image\+View object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_manager_acb42d9681e1abf4b7abf62083b0c06dc}{transition\+Image\+Layout}} (Vk\+Image image, Vk\+Format format, Vk\+Image\+Layout old\+Layout, Vk\+Image\+Layout new\+Layout)
+\begin{DoxyCompactList}\small\item\em Transition an image from one layout to another. \end{DoxyCompactList}\item 
+Vk\+Format \mbox{\hyperlink{class_image_manager_a338ec2097cbf83969ebd9d1dd99f6f28}{find\+Supported\+Format}} (const std\+::vector$<$ Vk\+Format $>$ \&candidates, Vk\+Image\+Tiling tiling, Vk\+Format\+Feature\+Flags features)
+\begin{DoxyCompactList}\small\item\em From a list of candidates, pick the best image format supported by the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_image_manager_a72514a07ec6cc0b2d0eff713b8c42757}{has\+Stencil\+Component}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Determine if a particular image format has a stencil component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_manager_a1adcb94b57d9c8953bf8549cf5d16623}\label{class_image_manager_a1adcb94b57d9c8953bf8549cf5d16623}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_image_manager_a1adcb94b57d9c8953bf8549cf5d16623}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em A reference to the Vulkan Context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_manager_aa83758c1d4c59fb3668d06062805276e}\label{class_image_manager_aa83758c1d4c59fb3668d06062805276e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_command_pool}{Command\+Pool}} $>$ \mbox{\hyperlink{class_image_manager_aa83758c1d4c59fb3668d06062805276e}{m\+Command\+Pool}}
+\begin{DoxyCompactList}\small\item\em The Command Pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allocation and Management of Vk\+Image objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_manager_adc24d10b860e7d33641636267e0e5e85}\label{class_image_manager_adc24d10b860e7d33641636267e0e5e85}} 
+\index{ImageManager@{ImageManager}!ImageManager@{ImageManager}}
+\index{ImageManager@{ImageManager}!ImageManager@{ImageManager}}
+\subsubsection{\texorpdfstring{ImageManager()}{ImageManager()}}
+{\footnotesize\ttfamily Image\+Manager\+::\+Image\+Manager (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_command_pool}{Command\+Pool}} $>$}]{command\+Pool }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Vulkan Context to operate within \\
+\hline
+{\em command\+Pool} & The Command Pool \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_manager_aba1591b66357882bb624595bb61fa059}\label{class_image_manager_aba1591b66357882bb624595bb61fa059}} 
+\index{ImageManager@{ImageManager}!createImage@{createImage}}
+\index{createImage@{createImage}!ImageManager@{ImageManager}}
+\subsubsection{\texorpdfstring{createImage()}{createImage()}}
+{\footnotesize\ttfamily void Image\+Manager\+::create\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{Vk\+Format}]{format,  }\item[{Vk\+Image\+Tiling}]{tiling,  }\item[{Vk\+Image\+Usage\+Flags}]{usage,  }\item[{Vk\+Memory\+Property\+Flags}]{properties,  }\item[{Vk\+Image \&}]{image,  }\item[{Vk\+Device\+Memory \&}]{image\+Memory }\end{DoxyParamCaption})}
+
+
+
+Create a new Vk\+Image object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the image \\
+\hline
+{\em height} & The height of the image \\
+\hline
+{\em format} & The image format \\
+\hline
+{\em tiling} & The type of tiling this image uses (either optimal or linear). i.\+e. how data is laid out in memory \\
+\hline
+{\em usage} & Flags for how the image will be used \\
+\hline
+{\em properties} & Required properties of the created image \\
+\hline
+{\em image} & The Vk\+Image object to be created \\
+\hline
+{\em image\+Memory} & The memory associated with the created Vk\+Image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_manager_a9a8948059660e956685b90bb8d5ba9f1}\label{class_image_manager_a9a8948059660e956685b90bb8d5ba9f1}} 
+\index{ImageManager@{ImageManager}!createImageView@{createImageView}}
+\index{createImageView@{createImageView}!ImageManager@{ImageManager}}
+\subsubsection{\texorpdfstring{createImageView()}{createImageView()}}
+{\footnotesize\ttfamily Vk\+Image\+View Image\+Manager\+::create\+Image\+View (\begin{DoxyParamCaption}\item[{Vk\+Image}]{image,  }\item[{Vk\+Format}]{image\+Format,  }\item[{Vk\+Image\+Aspect\+Flags}]{aspect\+Flags }\end{DoxyParamCaption})}
+
+
+
+Create a new Vk\+Image\+View object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & A handle to the associated Vk\+Image \\
+\hline
+{\em image\+Format} & The texel format of the image \\
+\hline
+{\em aspect\+Flags} & indicating which aspect of the image you want to view (i.\+e. color or depth) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_manager_a338ec2097cbf83969ebd9d1dd99f6f28}\label{class_image_manager_a338ec2097cbf83969ebd9d1dd99f6f28}} 
+\index{ImageManager@{ImageManager}!findSupportedFormat@{findSupportedFormat}}
+\index{findSupportedFormat@{findSupportedFormat}!ImageManager@{ImageManager}}
+\subsubsection{\texorpdfstring{findSupportedFormat()}{findSupportedFormat()}}
+{\footnotesize\ttfamily Vk\+Format Image\+Manager\+::find\+Supported\+Format (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Vk\+Format $>$ \&}]{candidates,  }\item[{Vk\+Image\+Tiling}]{tiling,  }\item[{Vk\+Format\+Feature\+Flags}]{features }\end{DoxyParamCaption})}
+
+
+
+From a list of candidates, pick the best image format supported by the device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidates} & A non-\/zero sized list of candidates for possible image formats \\
+\hline
+{\em tiling} & How the image is tiled \\
+\hline
+{\em features} & Features required by the chosen image format \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_manager_a72514a07ec6cc0b2d0eff713b8c42757}\label{class_image_manager_a72514a07ec6cc0b2d0eff713b8c42757}} 
+\index{ImageManager@{ImageManager}!hasStencilComponent@{hasStencilComponent}}
+\index{hasStencilComponent@{hasStencilComponent}!ImageManager@{ImageManager}}
+\subsubsection{\texorpdfstring{hasStencilComponent()}{hasStencilComponent()}}
+{\footnotesize\ttfamily bool Image\+Manager\+::has\+Stencil\+Component (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Determine if a particular image format has a stencil component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & The format being evaluated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_manager_acb42d9681e1abf4b7abf62083b0c06dc}\label{class_image_manager_acb42d9681e1abf4b7abf62083b0c06dc}} 
+\index{ImageManager@{ImageManager}!transitionImageLayout@{transitionImageLayout}}
+\index{transitionImageLayout@{transitionImageLayout}!ImageManager@{ImageManager}}
+\subsubsection{\texorpdfstring{transitionImageLayout()}{transitionImageLayout()}}
+{\footnotesize\ttfamily void Image\+Manager\+::transition\+Image\+Layout (\begin{DoxyParamCaption}\item[{Vk\+Image}]{image,  }\item[{Vk\+Format}]{format,  }\item[{Vk\+Image\+Layout}]{old\+Layout,  }\item[{Vk\+Image\+Layout}]{new\+Layout }\end{DoxyParamCaption})}
+
+
+
+Transition an image from one layout to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & A handle to the associated Vk\+Image \\
+\hline
+{\em format} & The texel format of the image \\
+\hline
+{\em old\+Layout} & The old Layout of the image \\
+\hline
+{\em new\+Layout} & The target layout \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Image\+Manager.\+h\item 
+src/Image\+Manager.\+cpp\end{DoxyCompactItemize}

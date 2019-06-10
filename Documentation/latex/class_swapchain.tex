@@ -1,0 +1,187 @@
+\hypertarget{class_swapchain}{}\section{Swapchain Class Reference}
+\label{class_swapchain}\index{Swapchain@{Swapchain}}
+
+
+A swapchain of images the Render System draws to the screen with.  
+
+
+
+
+{\ttfamily \#include $<$Swapchain.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_swapchain_aa065edb67794f690216311dff191d030}{Swapchain}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_manager}{Image\+Manager}} $>$ image\+Manager)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_swapchain_aa55768e0a9950d268518cfbd0f531d6c}{initialize}} (Vk\+Surface\+K\+HR surface, uint32\+\_\+t image\+Count)
+\begin{DoxyCompactList}\small\item\em Initialize the \mbox{\hyperlink{class_swapchain}{Swapchain}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a499790fed4913b2ac2a6782d4fe76633}\label{class_swapchain_a499790fed4913b2ac2a6782d4fe76633}} 
+void \mbox{\hyperlink{class_swapchain_a499790fed4913b2ac2a6782d4fe76633}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup any Vulkan resources the \mbox{\hyperlink{class_swapchain}{Swapchain}} has allocated. \end{DoxyCompactList}\item 
+std\+::vector$<$ Vk\+Framebuffer $>$ \mbox{\hyperlink{class_swapchain_ade933007b10309e978180d91fdfc129b}{create\+Framebuffers}} (Vk\+Render\+Pass render\+Pass)
+\begin{DoxyCompactList}\small\item\em Create framebuffers for each of the images in the swapchain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a9f3e59bd2233d0f31998bd12ca4dbd50}\label{class_swapchain_a9f3e59bd2233d0f31998bd12ca4dbd50}} 
+Vk\+Swapchain\+K\+HR \mbox{\hyperlink{class_swapchain_a9f3e59bd2233d0f31998bd12ca4dbd50}{get\+Vk\+Swapchain}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vk\+Swapchain\+K\+HR object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a3ff41524e879e526875a48915f7b3ae2}\label{class_swapchain_a3ff41524e879e526875a48915f7b3ae2}} 
+std\+::vector$<$ Vk\+Image\+View $>$ \mbox{\hyperlink{class_swapchain_a3ff41524e879e526875a48915f7b3ae2}{get\+Image\+Views}} () const
+\begin{DoxyCompactList}\small\item\em Get a vector of the Image\+Views for each swapchain image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a00bf8612221b76cb057f790931480bda}\label{class_swapchain_a00bf8612221b76cb057f790931480bda}} 
+Vk\+Format \mbox{\hyperlink{class_swapchain_a00bf8612221b76cb057f790931480bda}{get\+Image\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Get the format of the swapchain images. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_af66a7ddb38ff86f003096054de1cf672}\label{class_swapchain_af66a7ddb38ff86f003096054de1cf672}} 
+Vk\+Extent2D \mbox{\hyperlink{class_swapchain_af66a7ddb38ff86f003096054de1cf672}{get\+Extent}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of of the swapchain images (in pixels) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_ab2fd76c1f1f94eff758025cad425108e}\label{class_swapchain_ab2fd76c1f1f94eff758025cad425108e}} 
+uint32\+\_\+t \mbox{\hyperlink{class_swapchain_ab2fd76c1f1f94eff758025cad425108e}{size}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of swapchain images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Surface\+Format\+K\+HR \mbox{\hyperlink{class_swapchain_adf8974fc6cde1ce9b5359b9ea1443018}{choose\+Surface\+Format}} (Vk\+Surface\+K\+HR surface)
+\begin{DoxyCompactList}\small\item\em choose the best image format available to the given Vk\+Surface\+K\+HR \end{DoxyCompactList}\item 
+Vk\+Present\+Mode\+K\+HR \mbox{\hyperlink{class_swapchain_a871b68d6d79fe8ead853252e0c1f2954}{choose\+Present\+Mode}} (Vk\+Surface\+K\+HR surface)
+\begin{DoxyCompactList}\small\item\em Choose the best present mode available Order of preference\+: F\+I\+FO, M\+A\+I\+L\+B\+OX, I\+M\+M\+E\+D\+I\+A\+TE. \end{DoxyCompactList}\item 
+Vk\+Extent2D \mbox{\hyperlink{class_swapchain_ac336660395258258bbc2f13c18b261f8}{choose\+Extent}} (const Vk\+Surface\+Capabilities\+K\+HR \&capabilities)
+\begin{DoxyCompactList}\small\item\em Choose extents (resolution) for the swapchain images. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_ad61aed2fb65673f65bf5f070e386446e}\label{class_swapchain_ad61aed2fb65673f65bf5f070e386446e}} 
+void \mbox{\hyperlink{class_swapchain_ad61aed2fb65673f65bf5f070e386446e}{create\+Image\+Views}} ()
+\begin{DoxyCompactList}\small\item\em Create Image\+Views for each of the swapchain images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_swapchain_afff59cb515df67eed0071c16df52ce54}\label{class_swapchain_afff59cb515df67eed0071c16df52ce54}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_swapchain_afff59cb515df67eed0071c16df52ce54}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em A pointer to the render system\textquotesingle{}s vulkan context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a24df69e9676376e4b0693aa63e326b75}\label{class_swapchain_a24df69e9676376e4b0693aa63e326b75}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_manager}{Image\+Manager}} $>$ \mbox{\hyperlink{class_swapchain_a24df69e9676376e4b0693aa63e326b75}{m\+Image\+Manager}}
+\begin{DoxyCompactList}\small\item\em A pointer to the render system\textquotesingle{}s image manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a99f0c2f692e70a77e248f63ad3cabcad}\label{class_swapchain_a99f0c2f692e70a77e248f63ad3cabcad}} 
+Vk\+Swapchain\+K\+HR \mbox{\hyperlink{class_swapchain_a99f0c2f692e70a77e248f63ad3cabcad}{m\+Swapchain}}
+\begin{DoxyCompactList}\small\item\em The main Vk\+Swapchain\+K\+HR object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_af51061cfadd48e6f7b1cab08a84fe2a3}\label{class_swapchain_af51061cfadd48e6f7b1cab08a84fe2a3}} 
+std\+::vector$<$ Vk\+Image $>$ \mbox{\hyperlink{class_swapchain_af51061cfadd48e6f7b1cab08a84fe2a3}{m\+Images}}
+\begin{DoxyCompactList}\small\item\em The images composing the swapchain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a80d5a80de6cf5c9392ea712429b57534}\label{class_swapchain_a80d5a80de6cf5c9392ea712429b57534}} 
+std\+::vector$<$ Vk\+Image\+View $>$ \mbox{\hyperlink{class_swapchain_a80d5a80de6cf5c9392ea712429b57534}{m\+Image\+Views}}
+\begin{DoxyCompactList}\small\item\em Vk\+Image\+Views for each swapchain image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_a514df77ad1a92fe9694f9bc078d65cfc}\label{class_swapchain_a514df77ad1a92fe9694f9bc078d65cfc}} 
+Vk\+Format \mbox{\hyperlink{class_swapchain_a514df77ad1a92fe9694f9bc078d65cfc}{m\+Image\+Format}}
+\begin{DoxyCompactList}\small\item\em The format of the swapchain images. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_swapchain_af5d006713e38f4a1338fc5c6ec3d5c4c}\label{class_swapchain_af5d006713e38f4a1338fc5c6ec3d5c4c}} 
+Vk\+Extent2D \mbox{\hyperlink{class_swapchain_af5d006713e38f4a1338fc5c6ec3d5c4c}{m\+Extent}}
+\begin{DoxyCompactList}\small\item\em The size of the swapchain in pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A swapchain of images the Render System draws to the screen with. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_swapchain_aa065edb67794f690216311dff191d030}\label{class_swapchain_aa065edb67794f690216311dff191d030}} 
+\index{Swapchain@{Swapchain}!Swapchain@{Swapchain}}
+\index{Swapchain@{Swapchain}!Swapchain@{Swapchain}}
+\subsubsection{\texorpdfstring{Swapchain()}{Swapchain()}}
+{\footnotesize\ttfamily Swapchain\+::\+Swapchain (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_manager}{Image\+Manager}} $>$}]{image\+Manager }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & A pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} \\
+\hline
+{\em image\+Manager} & A pointer to the \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_image_manager}{Image\+Manager}} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_swapchain_ac336660395258258bbc2f13c18b261f8}\label{class_swapchain_ac336660395258258bbc2f13c18b261f8}} 
+\index{Swapchain@{Swapchain}!chooseExtent@{chooseExtent}}
+\index{chooseExtent@{chooseExtent}!Swapchain@{Swapchain}}
+\subsubsection{\texorpdfstring{chooseExtent()}{chooseExtent()}}
+{\footnotesize\ttfamily Vk\+Extent2D Swapchain\+::choose\+Extent (\begin{DoxyParamCaption}\item[{const Vk\+Surface\+Capabilities\+K\+HR \&}]{capabilities }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Choose extents (resolution) for the swapchain images. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capabilities} & the capabliities of the Vk\+Surface\+K\+HR object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_swapchain_a871b68d6d79fe8ead853252e0c1f2954}\label{class_swapchain_a871b68d6d79fe8ead853252e0c1f2954}} 
+\index{Swapchain@{Swapchain}!choosePresentMode@{choosePresentMode}}
+\index{choosePresentMode@{choosePresentMode}!Swapchain@{Swapchain}}
+\subsubsection{\texorpdfstring{choosePresentMode()}{choosePresentMode()}}
+{\footnotesize\ttfamily Vk\+Present\+Mode\+K\+HR Swapchain\+::choose\+Present\+Mode (\begin{DoxyParamCaption}\item[{Vk\+Surface\+K\+HR}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Choose the best present mode available Order of preference\+: F\+I\+FO, M\+A\+I\+L\+B\+OX, I\+M\+M\+E\+D\+I\+A\+TE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & The Vk\+Surface\+K\+HR object giving us a list of available present modes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_swapchain_adf8974fc6cde1ce9b5359b9ea1443018}\label{class_swapchain_adf8974fc6cde1ce9b5359b9ea1443018}} 
+\index{Swapchain@{Swapchain}!chooseSurfaceFormat@{chooseSurfaceFormat}}
+\index{chooseSurfaceFormat@{chooseSurfaceFormat}!Swapchain@{Swapchain}}
+\subsubsection{\texorpdfstring{chooseSurfaceFormat()}{chooseSurfaceFormat()}}
+{\footnotesize\ttfamily Vk\+Surface\+Format\+K\+HR Swapchain\+::choose\+Surface\+Format (\begin{DoxyParamCaption}\item[{Vk\+Surface\+K\+HR}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+choose the best image format available to the given Vk\+Surface\+K\+HR 
+
+Prefers \{ V\+K\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+B8\+G8\+R8\+A8\+\_\+\+U\+N\+O\+RM, V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+C\+E\+\_\+\+S\+R\+G\+B\+\_\+\+N\+O\+N\+L\+I\+N\+E\+A\+R\+\_\+\+K\+HR \} as a format
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & The Vk\+Surface\+K\+HR object giving us a list of available formats \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_swapchain_ade933007b10309e978180d91fdfc129b}\label{class_swapchain_ade933007b10309e978180d91fdfc129b}} 
+\index{Swapchain@{Swapchain}!createFramebuffers@{createFramebuffers}}
+\index{createFramebuffers@{createFramebuffers}!Swapchain@{Swapchain}}
+\subsubsection{\texorpdfstring{createFramebuffers()}{createFramebuffers()}}
+{\footnotesize\ttfamily std\+::vector$<$ Vk\+Framebuffer $>$ Swapchain\+::create\+Framebuffers (\begin{DoxyParamCaption}\item[{Vk\+Render\+Pass}]{render\+Pass }\end{DoxyParamCaption})}
+
+
+
+Create framebuffers for each of the images in the swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Pass} & The render\+Pass the frame buffer will attach to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_swapchain_aa55768e0a9950d268518cfbd0f531d6c}\label{class_swapchain_aa55768e0a9950d268518cfbd0f531d6c}} 
+\index{Swapchain@{Swapchain}!initialize@{initialize}}
+\index{initialize@{initialize}!Swapchain@{Swapchain}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Swapchain\+::initialize (\begin{DoxyParamCaption}\item[{Vk\+Surface\+K\+HR}]{surface,  }\item[{uint32\+\_\+t}]{image\+Count }\end{DoxyParamCaption})}
+
+
+
+Initialize the \mbox{\hyperlink{class_swapchain}{Swapchain}}. 
+
+Creates a Vk\+Swapchain\+K\+HR image, retrieves its Vk\+Images and creates Vk\+Image\+Views for them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & A handle to the surface we are rendering to \\
+\hline
+{\em image\+Count} & The number of images in the \mbox{\hyperlink{class_swapchain}{Swapchain}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Swapchain.\+h\item 
+src/Swapchain.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\hypertarget{class_camera}{}\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+Represents a camera wit position and orientation, fov, near plane, and far plane.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_a4bb1853b56a6a3ca92432e5db0d7f375}{Camera}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a8fe5c71a390571a861ad8afd99dfdea3}\label{class_camera_a8fe5c71a390571a861ad8afd99dfdea3}} 
+void \mbox{\hyperlink{class_camera_a8fe5c71a390571a861ad8afd99dfdea3}{update\+View\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Update the the camera\textquotesingle{}s View matrix, as well as the up, right and forward vectors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a899a715cd940bf80eb157f0e63f4c06b}{update\+Projection\+Matrix}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Update the \mbox{\hyperlink{class_camera}{Camera}}\textquotesingle{}s Projection Matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}\label{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}} 
+glm\+::vec3 \mbox{\hyperlink{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}{position}} = glm\+::vec3(0.\+0f)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_camera}{Camera}} position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a140b9462fb421bc44044b4bb7ba65959}\label{class_camera_a140b9462fb421bc44044b4bb7ba65959}} 
+glm\+::quat \mbox{\hyperlink{class_camera_a140b9462fb421bc44044b4bb7ba65959}{rotation}} = glm\+::quat(1.\+0f, 0.\+0f, 0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_camera}{Camera}}\textquotesingle{}s orientation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aaad8aac8f0fdb3f9c17208b85214f4d7}\label{class_camera_aaad8aac8f0fdb3f9c17208b85214f4d7}} 
+glm\+::mat4 \mbox{\hyperlink{class_camera_aaad8aac8f0fdb3f9c17208b85214f4d7}{view\+Mat}} = glm\+::mat4(1.\+0f)
+\begin{DoxyCompactList}\small\item\em The View Matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aac4ef81728f68a571955d72639f90f24}\label{class_camera_aac4ef81728f68a571955d72639f90f24}} 
+glm\+::mat4 \mbox{\hyperlink{class_camera_aac4ef81728f68a571955d72639f90f24}{proj\+Mat}} = glm\+::mat4(1.\+0f)
+\begin{DoxyCompactList}\small\item\em Projection Matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aa98ee9f3a770f03ebca0cde9f7b8ab50}\label{class_camera_aa98ee9f3a770f03ebca0cde9f7b8ab50}} 
+glm\+::vec3 \mbox{\hyperlink{class_camera_aa98ee9f3a770f03ebca0cde9f7b8ab50}{forward}} = glm\+::vec3(0.\+0f, 0.\+0f, 1.\+0f)
+\begin{DoxyCompactList}\small\item\em Forward Vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aebffcc6289dd99df7554b18d00a81161}\label{class_camera_aebffcc6289dd99df7554b18d00a81161}} 
+glm\+::vec3 \mbox{\hyperlink{class_camera_aebffcc6289dd99df7554b18d00a81161}{right}} = glm\+::vec3(1.\+0f, 0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em Right Vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a3fe5f351380fb118ffc600591769f049}\label{class_camera_a3fe5f351380fb118ffc600591769f049}} 
+glm\+::vec3 \mbox{\hyperlink{class_camera_a3fe5f351380fb118ffc600591769f049}{up}} = glm\+::vec3(0.\+0f, 1.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em Up Vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aff7393c9cfbccd7e369091f00008da93}\label{class_camera_aff7393c9cfbccd7e369091f00008da93}} 
+float \mbox{\hyperlink{class_camera_aff7393c9cfbccd7e369091f00008da93}{fov}} = 45.\+0f
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_camera}{Camera}}\textquotesingle{}s field of view (in degrees) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a78d8722a95e4f7770d79c950bda2bfdc}\label{class_camera_a78d8722a95e4f7770d79c950bda2bfdc}} 
+float \mbox{\hyperlink{class_camera_a78d8722a95e4f7770d79c950bda2bfdc}{near\+Plane}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_camera}{Camera}}\textquotesingle{}s near plane distance (the near end of clip space) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a8e8436cced3a180e13bfafa0791fb82a}\label{class_camera_a8e8436cced3a180e13bfafa0791fb82a}} 
+float \mbox{\hyperlink{class_camera_a8e8436cced3a180e13bfafa0791fb82a}{far\+Plane}} = 1000.\+0f
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_camera}{Camera}}\textquotesingle{}s far plane distance (the far end of clip space) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a camera wit position and orientation, fov, near plane, and far plane. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_camera_a4bb1853b56a6a3ca92432e5db0d7f375}\label{class_camera_a4bb1853b56a6a3ca92432e5db0d7f375}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The viewport width \\
+\hline
+{\em height} & The viewport height \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_a899a715cd940bf80eb157f0e63f4c06b}\label{class_camera_a899a715cd940bf80eb157f0e63f4c06b}} 
+\index{Camera@{Camera}!updateProjectionMatrix@{updateProjectionMatrix}}
+\index{updateProjectionMatrix@{updateProjectionMatrix}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{updateProjectionMatrix()}{updateProjectionMatrix()}}
+{\footnotesize\ttfamily void Camera\+::update\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the \mbox{\hyperlink{class_camera}{Camera}}\textquotesingle{}s Projection Matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Viewport width \\
+\hline
+{\em height} & Viewport height \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Camera.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\hypertarget{class_buffer_manager}{}\section{Buffer\+Manager Class Reference}
+\label{class_buffer_manager}\index{BufferManager@{BufferManager}}
+
+
+Subsystem in charge of buffer-\/related operations.  
+
+
+
+
+{\ttfamily \#include $<$Buffer\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_buffer_manager_af523fae07b927dafb3f5f3bef5f927ac}{Buffer\+Manager}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_command_pool}{Command\+Pool}} $>$ command\+Pool)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_buffer_manager_a3cfb02383e977add0d7adc39d81fef5b}{create\+Vertex\+Buffer}} (const std\+::vector$<$ \mbox{\hyperlink{struct_vertex}{Vertex}} $>$ \&vertices, Vk\+Buffer \&vertex\+Buffer, Vk\+Device\+Memory \&vertex\+Buffer\+Memory)
+\begin{DoxyCompactList}\small\item\em Creates a buffer for holding vertex information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_buffer_manager_a2807a6d23ffe0b089d50b98508c46982}{create\+Index\+Buffer}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&indices, Vk\+Buffer \&index\+Buffer, Vk\+Device\+Memory \&index\+Buffer\+Memory)
+\begin{DoxyCompactList}\small\item\em Creates a buffer for holding index information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_buffer_manager_ab834d6f887011bc0cc715b78e7da2ea0}{copy\+Buffer\+To\+Image}} (Vk\+Buffer buffer, Vk\+Image image, uint32\+\_\+t width, uint32\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Copies information from a Vk\+Buffer object to a Vk\+Image object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_buffer_manager_abcb26e15d2122483e6b70ab2b598b521}{create\+Buffer}} (Vk\+Device\+Size size, Vk\+Buffer\+Usage\+Flags usage, Vk\+Memory\+Property\+Flags properties, Vk\+Buffer \&buffer, Vk\+Device\+Memory \&buffer\+Memory)
+\begin{DoxyCompactList}\small\item\em Create a new Vk\+Buffer object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_buffer_manager_af126ee94ee4e2a4a0b7cf0d4aa6b0c65}{copy\+Buffer}} (Vk\+Buffer src\+Buffer, Vk\+Buffer dst\+Buffer, Vk\+Device\+Size size)
+\begin{DoxyCompactList}\small\item\em Copy a Vk\+Buffer\+Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_buffer_manager_a487b89a07aff1b3066bf584aa60a725c}\label{class_buffer_manager_a487b89a07aff1b3066bf584aa60a725c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_buffer_manager_a487b89a07aff1b3066bf584aa60a725c}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em A pointer to the Vulkan Context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_buffer_manager_adbb93943d98c9e8ce1c569413aae9f7c}\label{class_buffer_manager_adbb93943d98c9e8ce1c569413aae9f7c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_command_pool}{Command\+Pool}} $>$ \mbox{\hyperlink{class_buffer_manager_adbb93943d98c9e8ce1c569413aae9f7c}{m\+Command\+Pool}}
+\begin{DoxyCompactList}\small\item\em A poitner to the Command Pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Subsystem in charge of buffer-\/related operations. 
+
+This class Manages the creation of various types of buffers, as well as some operations such as copying. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_buffer_manager_af523fae07b927dafb3f5f3bef5f927ac}\label{class_buffer_manager_af523fae07b927dafb3f5f3bef5f927ac}} 
+\index{BufferManager@{BufferManager}!BufferManager@{BufferManager}}
+\index{BufferManager@{BufferManager}!BufferManager@{BufferManager}}
+\subsubsection{\texorpdfstring{BufferManager()}{BufferManager()}}
+{\footnotesize\ttfamily Buffer\+Manager\+::\+Buffer\+Manager (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_command_pool}{Command\+Pool}} $>$}]{command\+Pool }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Vulkan Context for this application \\
+\hline
+{\em command\+Pool} & The Command Pool object. Needed because some buffer operations make use of command buffers \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_buffer_manager_af126ee94ee4e2a4a0b7cf0d4aa6b0c65}\label{class_buffer_manager_af126ee94ee4e2a4a0b7cf0d4aa6b0c65}} 
+\index{BufferManager@{BufferManager}!copyBuffer@{copyBuffer}}
+\index{copyBuffer@{copyBuffer}!BufferManager@{BufferManager}}
+\subsubsection{\texorpdfstring{copyBuffer()}{copyBuffer()}}
+{\footnotesize\ttfamily void Buffer\+Manager\+::copy\+Buffer (\begin{DoxyParamCaption}\item[{Vk\+Buffer}]{src\+Buffer,  }\item[{Vk\+Buffer}]{dst\+Buffer,  }\item[{Vk\+Device\+Size}]{size }\end{DoxyParamCaption})}
+
+
+
+Copy a Vk\+Buffer\+Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Buffer} & Vk\+Buffer copy source \\
+\hline
+{\em dst\+Buffer} & Vk\+Buffer copy destination \\
+\hline
+{\em size} & the memory size of the source buffer (in bytes) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_buffer_manager_ab834d6f887011bc0cc715b78e7da2ea0}\label{class_buffer_manager_ab834d6f887011bc0cc715b78e7da2ea0}} 
+\index{BufferManager@{BufferManager}!copyBufferToImage@{copyBufferToImage}}
+\index{copyBufferToImage@{copyBufferToImage}!BufferManager@{BufferManager}}
+\subsubsection{\texorpdfstring{copyBufferToImage()}{copyBufferToImage()}}
+{\footnotesize\ttfamily void Buffer\+Manager\+::copy\+Buffer\+To\+Image (\begin{DoxyParamCaption}\item[{Vk\+Buffer}]{buffer,  }\item[{Vk\+Image}]{image,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Copies information from a Vk\+Buffer object to a Vk\+Image object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Handle to the Vk\+Buffer object to be copied \\
+\hline
+{\em image} & Handle to the destination Vk\+Image \\
+\hline
+{\em width} & Width of the destination Vk\+Image \\
+\hline
+{\em height} & Height of the destination Vk\+Image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_buffer_manager_abcb26e15d2122483e6b70ab2b598b521}\label{class_buffer_manager_abcb26e15d2122483e6b70ab2b598b521}} 
+\index{BufferManager@{BufferManager}!createBuffer@{createBuffer}}
+\index{createBuffer@{createBuffer}!BufferManager@{BufferManager}}
+\subsubsection{\texorpdfstring{createBuffer()}{createBuffer()}}
+{\footnotesize\ttfamily void Buffer\+Manager\+::create\+Buffer (\begin{DoxyParamCaption}\item[{Vk\+Device\+Size}]{size,  }\item[{Vk\+Buffer\+Usage\+Flags}]{usage,  }\item[{Vk\+Memory\+Property\+Flags}]{properties,  }\item[{Vk\+Buffer \&}]{buffer,  }\item[{Vk\+Device\+Memory \&}]{buffer\+Memory }\end{DoxyParamCaption})}
+
+
+
+Create a new Vk\+Buffer object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the memory size of the buffer to be created (in bytes) \\
+\hline
+{\em usage} & Usage flags for the buffer \\
+\hline
+{\em properties} & Properties of the buffer to be created \\
+\hline
+{\em buffer} & The Vk\+Buffer handle to be created \\
+\hline
+{\em buffer\+Memory} & The V\+K\+Buffer\+Memory handle to be created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_buffer_manager_a2807a6d23ffe0b089d50b98508c46982}\label{class_buffer_manager_a2807a6d23ffe0b089d50b98508c46982}} 
+\index{BufferManager@{BufferManager}!createIndexBuffer@{createIndexBuffer}}
+\index{createIndexBuffer@{createIndexBuffer}!BufferManager@{BufferManager}}
+\subsubsection{\texorpdfstring{createIndexBuffer()}{createIndexBuffer()}}
+{\footnotesize\ttfamily void Buffer\+Manager\+::create\+Index\+Buffer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{indices,  }\item[{Vk\+Buffer \&}]{index\+Buffer,  }\item[{Vk\+Device\+Memory \&}]{index\+Buffer\+Memory }\end{DoxyParamCaption})}
+
+
+
+Creates a buffer for holding index information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Vector of indices to be placed in the buffer \\
+\hline
+{\em index\+Buffer} & Handle to the buffer to be set \\
+\hline
+{\em index\+Buffer\+Memory} & handle to the buffer memory to be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_buffer_manager_a3cfb02383e977add0d7adc39d81fef5b}\label{class_buffer_manager_a3cfb02383e977add0d7adc39d81fef5b}} 
+\index{BufferManager@{BufferManager}!createVertexBuffer@{createVertexBuffer}}
+\index{createVertexBuffer@{createVertexBuffer}!BufferManager@{BufferManager}}
+\subsubsection{\texorpdfstring{createVertexBuffer()}{createVertexBuffer()}}
+{\footnotesize\ttfamily void Buffer\+Manager\+::create\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_vertex}{Vertex}} $>$ \&}]{vertices,  }\item[{Vk\+Buffer \&}]{vertex\+Buffer,  }\item[{Vk\+Device\+Memory \&}]{vertex\+Buffer\+Memory }\end{DoxyParamCaption})}
+
+
+
+Creates a buffer for holding vertex information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & Vector of vertices to be placed in the buffer \\
+\hline
+{\em vertex\+Buffer} & Handle to the buffer to be set \\
+\hline
+{\em vertex\+Buffer\+Memory} & handle to the buffer memory to be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Buffer\+Manager.\+h\item 
+src/Buffer\+Manager.\+cpp\end{DoxyCompactItemize}

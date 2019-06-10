@@ -1,0 +1,94 @@
+\hypertarget{struct_vertex}{}\section{Vertex Struct Reference}
+\label{struct_vertex}\index{Vertex@{Vertex}}
+
+
+\mbox{\hyperlink{struct_vertex}{Vertex}} used in a \mbox{\hyperlink{class_mesh}{Mesh}}. Holds positions, colors, normals, tangents and texture coordinates.  
+
+
+
+
+{\ttfamily \#include $<$Vertex.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_vertex_a80a54a84866d511b63bcc6f38899bed9}{operator==}} (const \mbox{\hyperlink{struct_vertex}{Vertex}} \&other) const
+\begin{DoxyCompactList}\small\item\em equality operator used by std\+::unordered\+\_\+map \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_vertex_aaca5987855365a64b2e48a60ccf4a6fc}\label{struct_vertex_aaca5987855365a64b2e48a60ccf4a6fc}} 
+static Vk\+Vertex\+Input\+Binding\+Description \mbox{\hyperlink{struct_vertex_aaca5987855365a64b2e48a60ccf4a6fc}{get\+Binding\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Get a Binding Description for pipeline creation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_vertex_aecd3d21b049688af3f575bd6529ea6c1}\label{struct_vertex_aecd3d21b049688af3f575bd6529ea6c1}} 
+static std\+::array$<$ Vk\+Vertex\+Input\+Attribute\+Description, 5 $>$ \mbox{\hyperlink{struct_vertex_aecd3d21b049688af3f575bd6529ea6c1}{get\+Attribute\+Descriptions}} ()
+\begin{DoxyCompactList}\small\item\em Get a description of all the \mbox{\hyperlink{struct_vertex}{Vertex}} attributes for pipeline creation Describes each attribute, binding number, locations of each attribute, attribute formats, and offsets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_vertex_a516f575596de99880ec990ac15027f94}\label{struct_vertex_a516f575596de99880ec990ac15027f94}} 
+glm\+::vec4 \mbox{\hyperlink{struct_vertex_a516f575596de99880ec990ac15027f94}{pos}}
+\begin{DoxyCompactList}\small\item\em Position of the vertex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_vertex_aa7ecd21578677765699b8831e0011696}\label{struct_vertex_aa7ecd21578677765699b8831e0011696}} 
+glm\+::vec4 \mbox{\hyperlink{struct_vertex_aa7ecd21578677765699b8831e0011696}{color}}
+\begin{DoxyCompactList}\small\item\em Color of the. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_vertex_a3aa35fe84025ecf1acccb5f65f5577fd}\label{struct_vertex_a3aa35fe84025ecf1acccb5f65f5577fd}} 
+glm\+::vec3 \mbox{\hyperlink{struct_vertex_a3aa35fe84025ecf1acccb5f65f5577fd}{normal}}
+\begin{DoxyCompactList}\small\item\em Normal of the vertex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_vertex_a89587fd853d4f3f42900715620a7364d}\label{struct_vertex_a89587fd853d4f3f42900715620a7364d}} 
+glm\+::vec3 \mbox{\hyperlink{struct_vertex_a89587fd853d4f3f42900715620a7364d}{tangent}}
+\begin{DoxyCompactList}\small\item\em Optional tangent to the normal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_vertex_a8214ff52fee03a5524ce58c3810a1be9}\label{struct_vertex_a8214ff52fee03a5524ce58c3810a1be9}} 
+glm\+::vec2 \mbox{\hyperlink{struct_vertex_a8214ff52fee03a5524ce58c3810a1be9}{tex\+Coord}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_texture}{Texture}} Coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{struct_vertex_aa80cb53b0a61b605b5e10d5b3fe9d505}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{struct_vertex}{Vertex}} \&v)
+\begin{DoxyCompactList}\small\item\em $<$$<$ print operator for Vertices \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{struct_vertex}{Vertex}} used in a \mbox{\hyperlink{class_mesh}{Mesh}}. Holds positions, colors, normals, tangents and texture coordinates. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_vertex_a80a54a84866d511b63bcc6f38899bed9}\label{struct_vertex_a80a54a84866d511b63bcc6f38899bed9}} 
+\index{Vertex@{Vertex}!operator==@{operator==}}
+\index{operator==@{operator==}!Vertex@{Vertex}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Vertex\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vertex}{Vertex}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+equality operator used by std\+::unordered\+\_\+map 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & A vertex to compare to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{struct_vertex_aa80cb53b0a61b605b5e10d5b3fe9d505}\label{struct_vertex_aa80cb53b0a61b605b5e10d5b3fe9d505}} 
+\index{Vertex@{Vertex}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vertex@{Vertex}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{struct_vertex}{Vertex}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+$<$$<$ print operator for Vertices 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Stream object to print to \\
+\hline
+{\em v} & The vertex to print \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Vertex.\+h\end{DoxyCompactItemize}

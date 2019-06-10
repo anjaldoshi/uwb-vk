@@ -1,0 +1,36 @@
+\hypertarget{struct_queue_family_indices}{}\section{Queue\+Family\+Indices Struct Reference}
+\label{struct_queue_family_indices}\index{QueueFamilyIndices@{QueueFamilyIndices}}
+
+
+A Set of Queue Family indices.  
+
+
+
+
+{\ttfamily \#include $<$Queue\+Families.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_queue_family_indices_a652cdfabe4719ae21a701e77d57e7899}\label{struct_queue_family_indices_a652cdfabe4719ae21a701e77d57e7899}} 
+bool \mbox{\hyperlink{struct_queue_family_indices_a652cdfabe4719ae21a701e77d57e7899}{is\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Determine if all the queue families have been found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_queue_family_indices_ade0723c4a6f188f83c8c8729227f3d17}\label{struct_queue_family_indices_ade0723c4a6f188f83c8c8729227f3d17}} 
+int \mbox{\hyperlink{struct_queue_family_indices_ade0723c4a6f188f83c8c8729227f3d17}{graphics\+Family}} = -\/1
+\begin{DoxyCompactList}\small\item\em The queue familiy used for graphics operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_queue_family_indices_a28a4e75b8e74d1153689ded81d660bad}\label{struct_queue_family_indices_a28a4e75b8e74d1153689ded81d660bad}} 
+int \mbox{\hyperlink{struct_queue_family_indices_a28a4e75b8e74d1153689ded81d660bad}{present\+Family}} = -\/1
+\begin{DoxyCompactList}\small\item\em The queue familiy used for presentation operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Set of Queue Family indices. 
+
+Each physical\+Device has several queue families, each with different properties. Differengt queue families must be used for different purposes. This struct holds the indices of the families that are suited for each type of way we use the queue. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Queue\+Families.\+h\end{DoxyCompactItemize}

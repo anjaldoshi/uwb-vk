@@ -1,0 +1,515 @@
+\hypertarget{class_render_system}{}\section{Render\+System Class Reference}
+\label{class_render_system}\index{RenderSystem@{RenderSystem}}
+
+
+Primary class responsible for rendering operations.  
+
+
+
+
+{\ttfamily \#include $<$Render\+System.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_render_system_a20496a8f52c4eb755d4bfcaba2e98e1c}\label{class_render_system_a20496a8f52c4eb755d4bfcaba2e98e1c}} 
+\mbox{\hyperlink{class_render_system_a20496a8f52c4eb755d4bfcaba2e98e1c}{Render\+System}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_aa4d0d7ba3d8c56cb089cb7b6609c5cac}\label{class_render_system_aa4d0d7ba3d8c56cb089cb7b6609c5cac}} 
+void \mbox{\hyperlink{class_render_system_aa4d0d7ba3d8c56cb089cb7b6609c5cac}{initialize}} (G\+L\+F\+Wwindow $\ast$window, const std\+::string \&app\+Name)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{class_render_system}{Render\+System}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a4bc6523a059eacee7fb4dd20657c4713}\label{class_render_system_a4bc6523a059eacee7fb4dd20657c4713}} 
+void \mbox{\hyperlink{class_render_system_a4bc6523a059eacee7fb4dd20657c4713}{draw\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Draws a single frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a9d20419e00ec4e1bc4cfd77689b575c8}\label{class_render_system_a9d20419e00ec4e1bc4cfd77689b575c8}} 
+void \mbox{\hyperlink{class_render_system_a9d20419e00ec4e1bc4cfd77689b575c8}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all allocated resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_afae24ad1ef810abc7a16ca331f4e6eef}{create\+Texture}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ \&texture, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{class_texture}{Texture}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_a16952550c2f754cd60d2a9630f6c1f0d}{create\+Mesh}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mesh}{Mesh}} $>$ \&mesh, const std\+::string \&filename, bool calculate\+Tangents)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{class_mesh}{Mesh}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_ac0558495d4560e36e338336645f34153}{create\+Shader}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \&shader, const std\+::string \&filename, Vk\+Shader\+Stage\+Flag\+Bits stage)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{class_shader}{Shader}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_aa90bf882e4c3136ee272a1733eb38291}{create\+Renderable}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \&renderable)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{class_renderable}{Renderable}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_aeaee982760399e62180207c573a469e7}{instantiate\+Renderable}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \&renderable)
+\begin{DoxyCompactList}\small\item\em Instantiate a renderable that has been set up. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_render_system_a43e41f536fee8a17796034acaeafb6e9}{create\+Uniform\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \&ubo, const size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Create a Uniform Buffer Object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_render_system_a3c3025bd7da582aef27ba42bb4f32de9}{update\+Uniform\+Buffer}} (const \mbox{\hyperlink{struct_u_b_o}{U\+BO}} \&ubo, const T \&ubo\+Data, size\+\_\+t buf\+Index)
+\begin{DoxyCompactList}\small\item\em Update the info inside a \mbox{\hyperlink{struct_u_b_o}{U\+BO}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_a3d3fc11d70c1b8da1178cd6f5f647c74}{set\+Clear\+Color}} (Vk\+Clear\+Value clear\+Color)
+\begin{DoxyCompactList}\small\item\em Set the background clear color to a given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_aad31d7e4c0a7b37fd101f3b5c13dbe12}{set\+Light\+M\+V\+P\+Buffer}} (const glm\+::mat4 \&mvp)
+\begin{DoxyCompactList}\small\item\em Set the M\+VP buffer for a shadow-\/casting light source. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} \mbox{\hyperlink{class_render_system_a8f0624e2d58d21719611ce863eafb031}{get\+Shadow\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_render_system_aa28dd2f1b27a913f0b972f3194a74618}\label{class_render_system_aa28dd2f1b27a913f0b972f3194a74618}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ $>$ \mbox{\hyperlink{class_render_system_aa28dd2f1b27a913f0b972f3194a74618}{m\+Renderables}}
+\begin{DoxyCompactList}\small\item\em The renderables currently in use and being rendered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_render_system_a198495772c148ec0fc5319a36721c62b}\label{class_render_system_a198495772c148ec0fc5319a36721c62b}} 
+void \mbox{\hyperlink{class_render_system_a198495772c148ec0fc5319a36721c62b}{create\+Swapchain}} ()
+\begin{DoxyCompactList}\small\item\em Create the \mbox{\hyperlink{class_swapchain}{Swapchain}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_ab24aff4914313ebaa5d87633d2126b6d}{recreate\+Swapchain}} ()
+\begin{DoxyCompactList}\small\item\em Recreate the \mbox{\hyperlink{class_swapchain}{Swapchain}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a71c200cab1427a7555fc5020337268be}\label{class_render_system_a71c200cab1427a7555fc5020337268be}} 
+void \mbox{\hyperlink{class_render_system_a71c200cab1427a7555fc5020337268be}{cleanup\+Swapchain}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup Swapchain-\/related resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_abe1ab5e58172135660b534f2de54daee}{create\+Pipeline}} (Vk\+Pipeline \&pipeline, Vk\+Pipeline\+Layout \&pipeline\+Layout, Vk\+Descriptor\+Set\+Layout \&descriptor\+Set\+Layout, const std\+::vector$<$ Vk\+Pipeline\+Shader\+Stage\+Create\+Info $>$ \&shader\+Stages, Vk\+Render\+Pass \&render\+Pass)
+\begin{DoxyCompactList}\small\item\em Create a new pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_af4da98602d449e23fefeac3373f44d0c}\label{class_render_system_af4da98602d449e23fefeac3373f44d0c}} 
+void \mbox{\hyperlink{class_render_system_af4da98602d449e23fefeac3373f44d0c}{create\+Color\+Render\+Pass}} ()
+\begin{DoxyCompactList}\small\item\em Create a color render\+Pass object for the main pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_a8649ff90d42a54b7afe20529ba03525e}{create\+Framebuffers}} (Vk\+Render\+Pass render\+Pass)
+\begin{DoxyCompactList}\small\item\em Create framebuffers to be used by a pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_a92ef71c72260306ef0bfc7700d097bc9}{create\+Descriptor\+Pool}} (uint32\+\_\+t max\+Sets, uint32\+\_\+t max\+Uniform\+Buffers, uint32\+\_\+t max\+Image\+Samplers)
+\begin{DoxyCompactList}\small\item\em Create the Descriptor\+Pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a61949d01de7fd18a18014711198c5ccf}\label{class_render_system_a61949d01de7fd18a18014711198c5ccf}} 
+void \mbox{\hyperlink{class_render_system_a61949d01de7fd18a18014711198c5ccf}{create\+Shadow\+Map\+Descriptor\+Set\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Create a Descriptor\+Set\+Layout for the Shadow pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a28c969e8d5ea7d449572c06c89ae0242}\label{class_render_system_a28c969e8d5ea7d449572c06c89ae0242}} 
+void \mbox{\hyperlink{class_render_system_a28c969e8d5ea7d449572c06c89ae0242}{create\+Shadow\+Map\+Descriptor\+Sets}} ()
+\begin{DoxyCompactList}\small\item\em Create the necessary Descriptor Sets to create a shadow map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a6a187b0185af36602204db40533daaf8}\label{class_render_system_a6a187b0185af36602204db40533daaf8}} 
+void \mbox{\hyperlink{class_render_system_a6a187b0185af36602204db40533daaf8}{create\+Command\+Buffers}} ()
+\begin{DoxyCompactList}\small\item\em Create the primary command buffers for the main pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ad2e1bc7f9df303cc2ee02a6677a99ebb}\label{class_render_system_ad2e1bc7f9df303cc2ee02a6677a99ebb}} 
+void \mbox{\hyperlink{class_render_system_ad2e1bc7f9df303cc2ee02a6677a99ebb}{create\+Shadow\+Command\+Buffers}} ()
+\begin{DoxyCompactList}\small\item\em Create the primary command buffers for the shadow pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_a6b91a5694d7220da53c8826155f6470d}{draw\+Renderable}} (Vk\+Command\+Buffer command\+Buffer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ model, Vk\+Descriptor\+Set \&descriptor\+Set)
+\begin{DoxyCompactList}\small\item\em Draw a renderable object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ab8787f0e229b21cacb8af3437423fed7}\label{class_render_system_ab8787f0e229b21cacb8af3437423fed7}} 
+void \mbox{\hyperlink{class_render_system_ab8787f0e229b21cacb8af3437423fed7}{create\+Depth\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Create a depth buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ae7c7581bfbcc743a8ed8106ff44b4998}\label{class_render_system_ae7c7581bfbcc743a8ed8106ff44b4998}} 
+void \mbox{\hyperlink{class_render_system_ae7c7581bfbcc743a8ed8106ff44b4998}{create\+Sync\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Create objects necessary to syncronize frame drawing Sync objects ensure that each stage of the \mbox{\hyperlink{class_render_system_a4bc6523a059eacee7fb4dd20657c4713}{draw\+Frame()}} method operates in order, as calls to vk\+Queue\+Submit and vk\+Queue\+Present\+K\+HR are asynchronous. In addition they ensure that draw commands are not submitted to a frame that is still not done presenting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_afdb2169091433ee0c10ef581b646ac9f}\label{class_render_system_afdb2169091433ee0c10ef581b646ac9f}} 
+void \mbox{\hyperlink{class_render_system_afdb2169091433ee0c10ef581b646ac9f}{create\+Shadow\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Create the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}, which is simply a depth map that can be used in the next render pass as Image\+Sampler input. The resources created as part of the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} are as follows\+: Vk\+Image Vk\+Image\+View Vk\+Sampler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a45fd2d41cf272efb8da347375876f709}\label{class_render_system_a45fd2d41cf272efb8da347375876f709}} 
+void \mbox{\hyperlink{class_render_system_a45fd2d41cf272efb8da347375876f709}{create\+Shadow\+Map\+Pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Create a Pipeline for writing to the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} The pipeline created is simple, in that it contains only a single vertex shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_a6c7bcbc69bc3e34c5cccd42a5a1ddf91}{create\+Shadow\+Render\+Pass}} (const \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} \&shadow\+Map)
+\begin{DoxyCompactList}\small\item\em Create a Render\+Pass for writing to the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_system_a6c31fab93f511b2103917679ccc52f6d}{create\+Shadow\+Framebuffers}} (Vk\+Render\+Pass shadow\+Render\+Pass, Vk\+Image\+View shadow\+Image\+View)
+\begin{DoxyCompactList}\small\item\em Create the Frame\+Buffers used as the output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_render_system_a32bbfc62a23026279c8fd600e92687d5}\label{class_render_system_a32bbfc62a23026279c8fd600e92687d5}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_render_system_a32bbfc62a23026279c8fd600e92687d5}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em The Vulkan Context object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ada5e795a489d64db30d85bc918f7501d}\label{class_render_system_ada5e795a489d64db30d85bc918f7501d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_command_pool}{Command\+Pool}} $>$ \mbox{\hyperlink{class_render_system_ada5e795a489d64db30d85bc918f7501d}{m\+Command\+Pool}}
+\begin{DoxyCompactList}\small\item\em The Command Pool for allocating command buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a654ffa6fe467272a0a56105d117ed805}\label{class_render_system_a654ffa6fe467272a0a56105d117ed805}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} $>$ \mbox{\hyperlink{class_render_system_a654ffa6fe467272a0a56105d117ed805}{m\+Buffer\+Manager}}
+\begin{DoxyCompactList}\small\item\em The Buffer Manager for allocating and performing buffer operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_afd841a0361635ba888c663805a9d2458}\label{class_render_system_afd841a0361635ba888c663805a9d2458}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_manager}{Image\+Manager}} $>$ \mbox{\hyperlink{class_render_system_afd841a0361635ba888c663805a9d2458}{m\+Image\+Manager}}
+\begin{DoxyCompactList}\small\item\em The Image Manager for allocation and performing Image operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a2aee130a4efdaab6edcdc05b208c5e28}\label{class_render_system_a2aee130a4efdaab6edcdc05b208c5e28}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_swapchain}{Swapchain}} $>$ \mbox{\hyperlink{class_render_system_a2aee130a4efdaab6edcdc05b208c5e28}{m\+Swapchain}}
+\begin{DoxyCompactList}\small\item\em The Primary \mbox{\hyperlink{class_swapchain}{Swapchain}} Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a661f131c9df9cd22b54a084bb4176c46}\label{class_render_system_a661f131c9df9cd22b54a084bb4176c46}} 
+std\+::vector$<$ Vk\+Command\+Buffer $>$ \mbox{\hyperlink{class_render_system_a661f131c9df9cd22b54a084bb4176c46}{m\+Command\+Buffers}}
+\begin{DoxyCompactList}\small\item\em The Main command buffers in use (same size as the swapchain) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_aad7a90af8c55faeafdd36aecf0e1277a}\label{class_render_system_aad7a90af8c55faeafdd36aecf0e1277a}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mesh}{Mesh}} $>$ $>$ \mbox{\hyperlink{class_render_system_aad7a90af8c55faeafdd36aecf0e1277a}{m\+Meshes}}
+\begin{DoxyCompactList}\small\item\em All meshes that have been created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_af04b5ca30a770d24c64ac585044857e6}\label{class_render_system_af04b5ca30a770d24c64ac585044857e6}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ $>$ \mbox{\hyperlink{class_render_system_af04b5ca30a770d24c64ac585044857e6}{m\+Shaders}}
+\begin{DoxyCompactList}\small\item\em All shader objects that have been created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a1c01a933c74c9f3b19184f1015f20d27}\label{class_render_system_a1c01a933c74c9f3b19184f1015f20d27}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ \mbox{\hyperlink{class_render_system_a1c01a933c74c9f3b19184f1015f20d27}{m\+Textures}}
+\begin{DoxyCompactList}\small\item\em All texture objects that have been created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a245fe0a2308f6868a3c19d25a6db8646}\label{class_render_system_a245fe0a2308f6868a3c19d25a6db8646}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ $>$ \mbox{\hyperlink{class_render_system_a245fe0a2308f6868a3c19d25a6db8646}{m\+Uniform\+Buffers}}
+\begin{DoxyCompactList}\small\item\em All U\+B\+Os that have been created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a5871df67881e36f34cf8379669721c03}\label{class_render_system_a5871df67881e36f34cf8379669721c03}} 
+std\+::vector$<$ Vk\+Framebuffer $>$ \mbox{\hyperlink{class_render_system_a5871df67881e36f34cf8379669721c03}{m\+Swapchain\+Framebuffers}}
+\begin{DoxyCompactList}\small\item\em The framebuffers the pipelines write to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_accda78ee2421bda18e46311aa573272d}\label{class_render_system_accda78ee2421bda18e46311aa573272d}} 
+Vk\+Render\+Pass \mbox{\hyperlink{class_render_system_accda78ee2421bda18e46311aa573272d}{m\+Color\+Pass}}
+\begin{DoxyCompactList}\small\item\em The Second, standard renderpass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ae28ff7c7d5f0f710aafdb4f718e32eb7}\label{class_render_system_ae28ff7c7d5f0f710aafdb4f718e32eb7}} 
+Vk\+Render\+Pass \mbox{\hyperlink{class_render_system_ae28ff7c7d5f0f710aafdb4f718e32eb7}{m\+Shadow\+Render\+Pass}}
+\begin{DoxyCompactList}\small\item\em The first renderpass, creating a shadow map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a5be2c2304e936d2ab7f26967aaa5ee47}\label{class_render_system_a5be2c2304e936d2ab7f26967aaa5ee47}} 
+Vk\+Descriptor\+Pool \mbox{\hyperlink{class_render_system_a5be2c2304e936d2ab7f26967aaa5ee47}{m\+Descriptor\+Pool}}
+\begin{DoxyCompactList}\small\item\em The Descriptor Pool Descriptor\+Sets allocate from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a57ca6a17b446f6aeb649f27b0a075c4c}\label{class_render_system_a57ca6a17b446f6aeb649f27b0a075c4c}} 
+Vk\+Image \mbox{\hyperlink{class_render_system_a57ca6a17b446f6aeb649f27b0a075c4c}{m\+Depth\+Image}}
+\begin{DoxyCompactList}\small\item\em The image the depth buffer writes to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ac15de0abc7ef6ac32a374ced4ca4c640}\label{class_render_system_ac15de0abc7ef6ac32a374ced4ca4c640}} 
+Vk\+Format \mbox{\hyperlink{class_render_system_ac15de0abc7ef6ac32a374ced4ca4c640}{m\+Depth\+Image\+Format}}
+\begin{DoxyCompactList}\small\item\em The format of the depth buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_adfe7fee3deae55b57e895ab097a4a64b}\label{class_render_system_adfe7fee3deae55b57e895ab097a4a64b}} 
+Vk\+Device\+Memory \mbox{\hyperlink{class_render_system_adfe7fee3deae55b57e895ab097a4a64b}{m\+Depth\+Image\+Memory}}
+\begin{DoxyCompactList}\small\item\em The memory the depth buffer is allocated from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a49ef2c844cbe00e4059ea299c709e1e0}\label{class_render_system_a49ef2c844cbe00e4059ea299c709e1e0}} 
+Vk\+Image\+View \mbox{\hyperlink{class_render_system_a49ef2c844cbe00e4059ea299c709e1e0}{m\+Depth\+Image\+View}}
+\begin{DoxyCompactList}\small\item\em A Vk\+Image\+View to the Depth Buffer image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_aad8d71a8ab05c208998a422966ade04a}\label{class_render_system_aad8d71a8ab05c208998a422966ade04a}} 
+\mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} \mbox{\hyperlink{class_render_system_aad8d71a8ab05c208998a422966ade04a}{m\+Shadow\+Map}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} object for the shadow pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_adf4469364daea6a3da34bd5d66d4f605}\label{class_render_system_adf4469364daea6a3da34bd5d66d4f605}} 
+std\+::vector$<$ Vk\+Framebuffer $>$ \mbox{\hyperlink{class_render_system_adf4469364daea6a3da34bd5d66d4f605}{m\+Shadow\+Framebuffers}}
+\begin{DoxyCompactList}\small\item\em The framebuffers the shadow map\textquotesingle{}s pipeline outputs to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_adc913051b690f4bf0630d84051b2473c}\label{class_render_system_adc913051b690f4bf0630d84051b2473c}} 
+Vk\+Pipeline \mbox{\hyperlink{class_render_system_adc913051b690f4bf0630d84051b2473c}{m\+Shadow\+Map\+Pipeline}}
+\begin{DoxyCompactList}\small\item\em The pipeline the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} is processeed in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a6dd71a293209144f66f4b7b8b16a0024}\label{class_render_system_a6dd71a293209144f66f4b7b8b16a0024}} 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{class_render_system_a6dd71a293209144f66f4b7b8b16a0024}{m\+Shadow\+Map\+Pipeline\+Layout}}
+\begin{DoxyCompactList}\small\item\em The layout of the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}\textquotesingle{}s pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_aee2e765044f2fb4cd1ffd9c7b0696bde}\label{class_render_system_aee2e765044f2fb4cd1ffd9c7b0696bde}} 
+\mbox{\hyperlink{struct_shader_set}{Shader\+Set}} \mbox{\hyperlink{class_render_system_aee2e765044f2fb4cd1ffd9c7b0696bde}{m\+Shadow\+Map\+Shader\+Set}}
+\begin{DoxyCompactList}\small\item\em The Shaders used in the Shadow Pass (just one vertex shader) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a39ec85f7bd1a226089ba8b6208d4981f}\label{class_render_system_a39ec85f7bd1a226089ba8b6208d4981f}} 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{class_render_system_a39ec85f7bd1a226089ba8b6208d4981f}{m\+Shadow\+Map\+Descriptor\+Set\+Layout}}
+\begin{DoxyCompactList}\small\item\em The Descriptor\+Set\+Layout for the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a530a3caa22c225ba859a7398314c0e5e}\label{class_render_system_a530a3caa22c225ba859a7398314c0e5e}} 
+std\+::vector$<$ Vk\+Descriptor\+Set $>$ \mbox{\hyperlink{class_render_system_a530a3caa22c225ba859a7398314c0e5e}{m\+Shadow\+Map\+Descriptor\+Sets}}
+\begin{DoxyCompactList}\small\item\em The Descriptor\+Sets for all the resources sent to the Shaders processing the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_aed4d1f392fc478f4ef7b02937b09a035}\label{class_render_system_aed4d1f392fc478f4ef7b02937b09a035}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \mbox{\hyperlink{class_render_system_aed4d1f392fc478f4ef7b02937b09a035}{m\+Shadow\+Caster\+U\+BO}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{struct_u_b_o}{U\+BO}} for holding the mvp matrices for the shadow-\/casting object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_aa57e2b9702c90f2b27324ffbcc20e4fe}\label{class_render_system_aa57e2b9702c90f2b27324ffbcc20e4fe}} 
+std\+::vector$<$ Vk\+Command\+Buffer $>$ \mbox{\hyperlink{class_render_system_aa57e2b9702c90f2b27324ffbcc20e4fe}{m\+Shadow\+Command\+Buffers}}
+\begin{DoxyCompactList}\small\item\em Command Buffers for processing the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ab8bf79f6f6de8fab7126a4a02f8afa20}\label{class_render_system_ab8bf79f6f6de8fab7126a4a02f8afa20}} 
+std\+::vector$<$ Vk\+Semaphore $>$ \mbox{\hyperlink{class_render_system_ab8bf79f6f6de8fab7126a4a02f8afa20}{m\+Image\+Available\+Semaphores}}
+\begin{DoxyCompactList}\small\item\em Semaphores for indicating that a new image on the swapchain is available. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ab43f42732cf10c16e8b5f54c793758fb}\label{class_render_system_ab43f42732cf10c16e8b5f54c793758fb}} 
+std\+::vector$<$ Vk\+Semaphore $>$ \mbox{\hyperlink{class_render_system_ab43f42732cf10c16e8b5f54c793758fb}{m\+Shadow\+Map\+Available\+Semaphores}}
+\begin{DoxyCompactList}\small\item\em Semaphores for indicating that a new \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} has been created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ae54f53003fcabea0932fcb5b859ec4b5}\label{class_render_system_ae54f53003fcabea0932fcb5b859ec4b5}} 
+std\+::vector$<$ Vk\+Semaphore $>$ \mbox{\hyperlink{class_render_system_ae54f53003fcabea0932fcb5b859ec4b5}{m\+Render\+Finished\+Semaphores}}
+\begin{DoxyCompactList}\small\item\em Semaphores for indicating that a new frame has finished rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_a2ae483ee5eca6f400b08b0cf4ff295a5}\label{class_render_system_a2ae483ee5eca6f400b08b0cf4ff295a5}} 
+std\+::vector$<$ Vk\+Fence $>$ \mbox{\hyperlink{class_render_system_a2ae483ee5eca6f400b08b0cf4ff295a5}{m\+Frame\+Fences}}
+\begin{DoxyCompactList}\small\item\em Fences that ensure a frame does not start being drawn until the last frame with the same index is done. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ade8699ab15bb365a8ba30f398644e08b}\label{class_render_system_ade8699ab15bb365a8ba30f398644e08b}} 
+size\+\_\+t \mbox{\hyperlink{class_render_system_ade8699ab15bb365a8ba30f398644e08b}{m\+Current\+Frame}} = 0
+\begin{DoxyCompactList}\small\item\em The current frame that is being drawn (index into the framebuffer array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_render_system_ac27ef13631dad64e0036a2d6b1aab9cf}\label{class_render_system_ac27ef13631dad64e0036a2d6b1aab9cf}} 
+Vk\+Clear\+Value \mbox{\hyperlink{class_render_system_ac27ef13631dad64e0036a2d6b1aab9cf}{m\+Clear\+Color}} = \{ 0.\+0f, 0.\+0f, 0.\+0f, 1.\+0f \}
+\begin{DoxyCompactList}\small\item\em The color that the screen will be cleared to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primary class responsible for rendering operations. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_render_system_a92ef71c72260306ef0bfc7700d097bc9}\label{class_render_system_a92ef71c72260306ef0bfc7700d097bc9}} 
+\index{RenderSystem@{RenderSystem}!createDescriptorPool@{createDescriptorPool}}
+\index{createDescriptorPool@{createDescriptorPool}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createDescriptorPool()}{createDescriptorPool()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Descriptor\+Pool (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+Sets,  }\item[{uint32\+\_\+t}]{max\+Uniform\+Buffers,  }\item[{uint32\+\_\+t}]{max\+Image\+Samplers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the Descriptor\+Pool. 
+
+The Descriptor Pool is memory pool for allocating Descriptor\+Sets from.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Sets} & The maximum number of descriptor sets in the application \\
+\hline
+{\em max\+Uniform\+Buffers} & The maximum number of U\+B\+Os that will be used \\
+\hline
+{\em max\+Image\+Samplers} & The maximum number of Image/\+Samplers(i.\+e. Textures) in the application. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a8649ff90d42a54b7afe20529ba03525e}\label{class_render_system_a8649ff90d42a54b7afe20529ba03525e}} 
+\index{RenderSystem@{RenderSystem}!createFramebuffers@{createFramebuffers}}
+\index{createFramebuffers@{createFramebuffers}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createFramebuffers()}{createFramebuffers()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Framebuffers (\begin{DoxyParamCaption}\item[{Vk\+Render\+Pass}]{render\+Pass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create framebuffers to be used by a pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Pass} & The renderpass that will write to the framebuffers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a16952550c2f754cd60d2a9630f6c1f0d}\label{class_render_system_a16952550c2f754cd60d2a9630f6c1f0d}} 
+\index{RenderSystem@{RenderSystem}!createMesh@{createMesh}}
+\index{createMesh@{createMesh}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createMesh()}{createMesh()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Mesh (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mesh}{Mesh}} $>$ \&}]{mesh,  }\item[{const std\+::string \&}]{filename,  }\item[{bool}]{calculate\+Tangents }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{class_mesh}{Mesh}} object. 
+
+Creates a \mbox{\hyperlink{class_mesh}{Mesh}} object with std\+::make\+\_\+shared and keeps a copy to properly cleanup at the end
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & The mesh object to create \\
+\hline
+{\em filename} & The file to create the mesh from (must be a $\ast$.mesh file) \\
+\hline
+{\em calculate\+Tangents} & Whether to calculate tangents for all of the vertices (used for normal mapping) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_abe1ab5e58172135660b534f2de54daee}\label{class_render_system_abe1ab5e58172135660b534f2de54daee}} 
+\index{RenderSystem@{RenderSystem}!createPipeline@{createPipeline}}
+\index{createPipeline@{createPipeline}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createPipeline()}{createPipeline()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Pipeline (\begin{DoxyParamCaption}\item[{Vk\+Pipeline \&}]{pipeline,  }\item[{Vk\+Pipeline\+Layout \&}]{pipeline\+Layout,  }\item[{Vk\+Descriptor\+Set\+Layout \&}]{descriptor\+Set\+Layout,  }\item[{const std\+::vector$<$ Vk\+Pipeline\+Shader\+Stage\+Create\+Info $>$ \&}]{shader\+Stages,  }\item[{Vk\+Render\+Pass \&}]{render\+Pass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a new pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & The pipeline to create \\
+\hline
+{\em pipeline\+Layout} & The layout for the pipeline, created in this method \\
+\hline
+{\em descriptor\+Set\+Layout} & Descripes Which types of resources the pipeline should expect as inputs for the shaders \\
+\hline
+{\em shader\+Stages} & The shaders that the pipline will use \\
+\hline
+{\em render\+Pass} & The render\+Pass the pipeline will use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_aa90bf882e4c3136ee272a1733eb38291}\label{class_render_system_aa90bf882e4c3136ee272a1733eb38291}} 
+\index{RenderSystem@{RenderSystem}!createRenderable@{createRenderable}}
+\index{createRenderable@{createRenderable}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createRenderable()}{createRenderable()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Renderable (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \&}]{renderable }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{class_renderable}{Renderable}} object. 
+
+Very simple -\/ Just creates a renderable shared\+\_\+ptr, passing the \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} in its constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderable} & The renderable object to create \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_ac0558495d4560e36e338336645f34153}\label{class_render_system_ac0558495d4560e36e338336645f34153}} 
+\index{RenderSystem@{RenderSystem}!createShader@{createShader}}
+\index{createShader@{createShader}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createShader()}{createShader()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Shader (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \&}]{shader,  }\item[{const std\+::string \&}]{filename,  }\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{stage }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{class_shader}{Shader}} object. 
+
+Creates a \mbox{\hyperlink{class_shader}{Shader}} object with std\+::make\+\_\+shared and keeps a copy to properly cleanup at the end
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader object to create \\
+\hline
+{\em filename} & The shader file to load (must a $\ast$.spv file) \\
+\hline
+{\em stage} & The shader stage the shader will run in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a6c31fab93f511b2103917679ccc52f6d}\label{class_render_system_a6c31fab93f511b2103917679ccc52f6d}} 
+\index{RenderSystem@{RenderSystem}!createShadowFramebuffers@{createShadowFramebuffers}}
+\index{createShadowFramebuffers@{createShadowFramebuffers}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createShadowFramebuffers()}{createShadowFramebuffers()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Shadow\+Framebuffers (\begin{DoxyParamCaption}\item[{Vk\+Render\+Pass}]{shadow\+Render\+Pass,  }\item[{Vk\+Image\+View}]{shadow\+Image\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the Frame\+Buffers used as the output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shadow\+Render\+Pass} & The Vk\+Render\+Pass describing attachments \\
+\hline
+{\em shadow\+Image\+View} & The Vk\+Image\+View object for the shadow map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a6c7bcbc69bc3e34c5cccd42a5a1ddf91}\label{class_render_system_a6c7bcbc69bc3e34c5cccd42a5a1ddf91}} 
+\index{RenderSystem@{RenderSystem}!createShadowRenderPass@{createShadowRenderPass}}
+\index{createShadowRenderPass@{createShadowRenderPass}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createShadowRenderPass()}{createShadowRenderPass()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Shadow\+Render\+Pass (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} \&}]{shadow\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a Render\+Pass for writing to the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shadow\+Map} & The \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} the renderpass will write to when running \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_afae24ad1ef810abc7a16ca331f4e6eef}\label{class_render_system_afae24ad1ef810abc7a16ca331f4e6eef}} 
+\index{RenderSystem@{RenderSystem}!createTexture@{createTexture}}
+\index{createTexture@{createTexture}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createTexture()}{createTexture()}}
+{\footnotesize\ttfamily void Render\+System\+::create\+Texture (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ \&}]{texture,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{class_texture}{Texture}} object. 
+
+Creates a \mbox{\hyperlink{class_texture}{Texture}} object with std\+::make\+\_\+shared and keeps a copy to properly cleanup at the end
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture object to create \\
+\hline
+{\em filename} & A directory to the image file to create the texture from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a43e41f536fee8a17796034acaeafb6e9}\label{class_render_system_a43e41f536fee8a17796034acaeafb6e9}} 
+\index{RenderSystem@{RenderSystem}!createUniformBuffer@{createUniformBuffer}}
+\index{createUniformBuffer@{createUniformBuffer}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{createUniformBuffer()}{createUniformBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Render\+System\+::create\+Uniform\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ \&}]{ubo,  }\item[{const size\+\_\+t \&}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a Uniform Buffer Object. 
+
+Note\+: the count parameter is untested and likely does not work, so leave at one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ubo} & The Uniform Buffer Object to create \\
+\hline
+{\em count} & the number of U\+B\+Os to create \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a6b91a5694d7220da53c8826155f6470d}\label{class_render_system_a6b91a5694d7220da53c8826155f6470d}} 
+\index{RenderSystem@{RenderSystem}!drawRenderable@{drawRenderable}}
+\index{drawRenderable@{drawRenderable}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{drawRenderable()}{drawRenderable()}}
+{\footnotesize\ttfamily void Render\+System\+::draw\+Renderable (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{command\+Buffer,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$}]{model,  }\item[{Vk\+Descriptor\+Set \&}]{descriptor\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Draw a renderable object. 
+
+Draw a renderable object. This method should be called during command buffer construction
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+Buffer} & A command\+Buffer that is in the middle of recording \\
+\hline
+{\em model} & A renderable object ready to be rendered \\
+\hline
+{\em descriptor\+Set} & A descriptor set for binding the required resources for the draw command \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a8f0624e2d58d21719611ce863eafb031}\label{class_render_system_a8f0624e2d58d21719611ce863eafb031}} 
+\index{RenderSystem@{RenderSystem}!getShadowMap@{getShadowMap}}
+\index{getShadowMap@{getShadowMap}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{getShadowMap()}{getShadowMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} Render\+System\+::get\+Shadow\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}}. 
+
+This is commonly used to set a \mbox{\hyperlink{class_renderable}{Renderable}} as shadow-\/receiving \mbox{\Hypertarget{class_render_system_aeaee982760399e62180207c573a469e7}\label{class_render_system_aeaee982760399e62180207c573a469e7}} 
+\index{RenderSystem@{RenderSystem}!instantiateRenderable@{instantiateRenderable}}
+\index{instantiateRenderable@{instantiateRenderable}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{instantiateRenderable()}{instantiateRenderable()}}
+{\footnotesize\ttfamily void Render\+System\+::instantiate\+Renderable (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $>$ \&}]{renderable }\end{DoxyParamCaption})}
+
+
+
+Instantiate a renderable that has been set up. 
+
+Instaniates a renderable by creating the Descriptor Set Layouts, Descriptor\+Sets, and Pipelines. Also keeps a copy of the renderable for cleanup, and recreates the command buffers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderable} & The \mbox{\hyperlink{class_renderable}{Renderable}} to instantiate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_ab24aff4914313ebaa5d87633d2126b6d}\label{class_render_system_ab24aff4914313ebaa5d87633d2126b6d}} 
+\index{RenderSystem@{RenderSystem}!recreateSwapchain@{recreateSwapchain}}
+\index{recreateSwapchain@{recreateSwapchain}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{recreateSwapchain()}{recreateSwapchain()}}
+{\footnotesize\ttfamily void Render\+System\+::recreate\+Swapchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recreate the \mbox{\hyperlink{class_swapchain}{Swapchain}}. 
+
+If large changes to the \mbox{\hyperlink{class_render_system}{Render\+System}} are made (such as changing the clear color), the swapchain will need to be recreated with the new settings through this method \mbox{\Hypertarget{class_render_system_a3d3fc11d70c1b8da1178cd6f5f647c74}\label{class_render_system_a3d3fc11d70c1b8da1178cd6f5f647c74}} 
+\index{RenderSystem@{RenderSystem}!setClearColor@{setClearColor}}
+\index{setClearColor@{setClearColor}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{setClearColor()}{setClearColor()}}
+{\footnotesize\ttfamily void Render\+System\+::set\+Clear\+Color (\begin{DoxyParamCaption}\item[{Vk\+Clear\+Value}]{clear\+Color }\end{DoxyParamCaption})}
+
+
+
+Set the background clear color to a given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clear\+Color} & The Color to set the background color as \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_aad31d7e4c0a7b37fd101f3b5c13dbe12}\label{class_render_system_aad31d7e4c0a7b37fd101f3b5c13dbe12}} 
+\index{RenderSystem@{RenderSystem}!setLightMVPBuffer@{setLightMVPBuffer}}
+\index{setLightMVPBuffer@{setLightMVPBuffer}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{setLightMVPBuffer()}{setLightMVPBuffer()}}
+{\footnotesize\ttfamily void Render\+System\+::set\+Light\+M\+V\+P\+Buffer (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{mvp }\end{DoxyParamCaption})}
+
+
+
+Set the M\+VP buffer for a shadow-\/casting light source. 
+
+Set the M\+VP buffer for a shadow-\/casting light source. Currently This only supports a single light source, but could be modified to support several
+
+
+\begin{DoxyParams}{Parameters}
+{\em mvp} & The mvp matrix to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_system_a3c3025bd7da582aef27ba42bb4f32de9}\label{class_render_system_a3c3025bd7da582aef27ba42bb4f32de9}} 
+\index{RenderSystem@{RenderSystem}!updateUniformBuffer@{updateUniformBuffer}}
+\index{updateUniformBuffer@{updateUniformBuffer}!RenderSystem@{RenderSystem}}
+\subsubsection{\texorpdfstring{updateUniformBuffer()}{updateUniformBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Render\+System\+::update\+Uniform\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_u_b_o}{U\+BO}} \&}]{ubo,  }\item[{const T \&}]{ubo\+Data,  }\item[{size\+\_\+t}]{buf\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the info inside a \mbox{\hyperlink{struct_u_b_o}{U\+BO}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ubo} & The \mbox{\hyperlink{struct_u_b_o}{U\+BO}} to update \\
+\hline
+{\em ubo\+Data} & The data to update the \mbox{\hyperlink{struct_u_b_o}{U\+BO}} with \\
+\hline
+{\em buf\+Index} & If the \mbox{\hyperlink{struct_u_b_o}{U\+BO}} is an array, this provides an index within the array to update at. NoteL this feature is untested and likely does not work. Please leave at 0. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Render\+System.\+h\item 
+src/Render\+System.\+cpp\end{DoxyCompactItemize}

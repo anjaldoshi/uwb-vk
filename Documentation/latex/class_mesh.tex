@@ -1,0 +1,142 @@
+\hypertarget{class_mesh}{}\section{Mesh Class Reference}
+\label{class_mesh}\index{Mesh@{Mesh}}
+
+
+A \mbox{\hyperlink{class_mesh}{Mesh}} composed of vertex and index buffers.  
+
+
+
+
+{\ttfamily \#include $<$Mesh.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mesh_a3d6d629589f4450a0d865175313ca589}{Mesh}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} $>$ buffer\+Manager)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a5cfd919c6ee3b1533fa977a671e9d8ef}{load}} (std\+::vector$<$ \mbox{\hyperlink{struct_vertex}{Vertex}} $>$ \&vertices, std\+::vector$<$ uint32\+\_\+t $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{struct_vertex}{Vertex}} and index buffers from vectors of vertices and indices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_afc4fe8ab99f33cf95466de45f24b06dc}\label{class_mesh_afc4fe8ab99f33cf95466de45f24b06dc}} 
+void \mbox{\hyperlink{class_mesh_afc4fe8ab99f33cf95466de45f24b06dc}{free}} ()
+\begin{DoxyCompactList}\small\item\em Free all resources. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_mesh_a6dde20eaf4e25eba5cd13918e269445a}{get\+Index\+Count}} ()
+\begin{DoxyCompactList}\small\item\em get the number of indices \end{DoxyCompactList}\item 
+Vk\+Buffer \mbox{\hyperlink{class_mesh_a2c18dc0f46962bfa01d274d632cd1242}{get\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Get a handle to the \mbox{\hyperlink{struct_vertex}{Vertex}} Buffer. \end{DoxyCompactList}\item 
+Vk\+Buffer \mbox{\hyperlink{class_mesh_a7f8c80d74ef174adef3bc5b56aa715af}{get\+Index\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Get a handle to the Index Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mesh_ab9973a6da3df09fdf2e82fb7733be4ed}\label{class_mesh_ab9973a6da3df09fdf2e82fb7733be4ed}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_mesh_ab9973a6da3df09fdf2e82fb7733be4ed}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_aea2c6a1f1e0e87196c0d7116ccf63088}\label{class_mesh_aea2c6a1f1e0e87196c0d7116ccf63088}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} $>$ \mbox{\hyperlink{class_mesh_aea2c6a1f1e0e87196c0d7116ccf63088}{m\+Buffer\+Manager}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_render_system}{Render\+System}}\textquotesingle{}s \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_a1bad8bb82d9ec131c77b2a8d7d137408}\label{class_mesh_a1bad8bb82d9ec131c77b2a8d7d137408}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_mesh_a1bad8bb82d9ec131c77b2a8d7d137408}{m\+Vertices}}
+\begin{DoxyCompactList}\small\item\em The vertices in the mesh. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_a0a744888ceee36087d343c13bb08234e}\label{class_mesh_a0a744888ceee36087d343c13bb08234e}} 
+Vk\+Buffer \mbox{\hyperlink{class_mesh_a0a744888ceee36087d343c13bb08234e}{m\+Vertex\+Buffer}}
+\begin{DoxyCompactList}\small\item\em The Vk\+Buffer object for holding vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_abd6137f58126f9ed337516486eb872f8}\label{class_mesh_abd6137f58126f9ed337516486eb872f8}} 
+Vk\+Device\+Memory \mbox{\hyperlink{class_mesh_abd6137f58126f9ed337516486eb872f8}{m\+Vertex\+Buffer\+Memory}}
+\begin{DoxyCompactList}\small\item\em The device memory for the vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_a18a52fd32c77e52d3e27a47256b01b17}\label{class_mesh_a18a52fd32c77e52d3e27a47256b01b17}} 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{class_mesh_a18a52fd32c77e52d3e27a47256b01b17}{m\+Indices}}
+\begin{DoxyCompactList}\small\item\em The indices in the mesh. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_a864eb17a88cae48a17a0b324f8c2335a}\label{class_mesh_a864eb17a88cae48a17a0b324f8c2335a}} 
+Vk\+Buffer \mbox{\hyperlink{class_mesh_a864eb17a88cae48a17a0b324f8c2335a}{m\+Index\+Buffer}}
+\begin{DoxyCompactList}\small\item\em The Vk\+Buffer object for the indices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_ae41ea253fa1d822d176f86b68db8b6ed}\label{class_mesh_ae41ea253fa1d822d176f86b68db8b6ed}} 
+Vk\+Device\+Memory \mbox{\hyperlink{class_mesh_ae41ea253fa1d822d176f86b68db8b6ed}{m\+Index\+Buffer\+Memory}}
+\begin{DoxyCompactList}\small\item\em The device memory for the indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \mbox{\hyperlink{class_mesh}{Mesh}} composed of vertex and index buffers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mesh_a3d6d629589f4450a0d865175313ca589}\label{class_mesh_a3d6d629589f4450a0d865175313ca589}} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}} $>$}]{buffer\+Manager }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} object \\
+\hline
+{\em buffer\+Manager} & The \mbox{\hyperlink{class_buffer_manager}{Buffer\+Manager}}, used for making vertex and index buffers \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mesh_a7f8c80d74ef174adef3bc5b56aa715af}\label{class_mesh_a7f8c80d74ef174adef3bc5b56aa715af}} 
+\index{Mesh@{Mesh}!getIndexBuffer@{getIndexBuffer}}
+\index{getIndexBuffer@{getIndexBuffer}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{getIndexBuffer()}{getIndexBuffer()}}
+{\footnotesize\ttfamily Vk\+Buffer Mesh\+::get\+Index\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a handle to the Index Buffer. 
+
+\begin{DoxyReturn}{Returns}
+The index buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a6dde20eaf4e25eba5cd13918e269445a}\label{class_mesh_a6dde20eaf4e25eba5cd13918e269445a}} 
+\index{Mesh@{Mesh}!getIndexCount@{getIndexCount}}
+\index{getIndexCount@{getIndexCount}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{getIndexCount()}{getIndexCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t Mesh\+::get\+Index\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the number of indices 
+
+\begin{DoxyReturn}{Returns}
+The number of indices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a2c18dc0f46962bfa01d274d632cd1242}\label{class_mesh_a2c18dc0f46962bfa01d274d632cd1242}} 
+\index{Mesh@{Mesh}!getVertexBuffer@{getVertexBuffer}}
+\index{getVertexBuffer@{getVertexBuffer}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{getVertexBuffer()}{getVertexBuffer()}}
+{\footnotesize\ttfamily Vk\+Buffer Mesh\+::get\+Vertex\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a handle to the \mbox{\hyperlink{struct_vertex}{Vertex}} Buffer. 
+
+\begin{DoxyReturn}{Returns}
+The vertex buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a5cfd919c6ee3b1533fa977a671e9d8ef}\label{class_mesh_a5cfd919c6ee3b1533fa977a671e9d8ef}} 
+\index{Mesh@{Mesh}!load@{load}}
+\index{load@{load}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Mesh\+::load (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_vertex}{Vertex}} $>$ \&}]{vertices,  }\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{indices }\end{DoxyParamCaption})}
+
+
+
+Create \mbox{\hyperlink{struct_vertex}{Vertex}} and index buffers from vectors of vertices and indices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & A vector of vertices \\
+\hline
+{\em indices} & A vector of indices \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Mesh.\+h\item 
+src/Mesh.\+cpp\end{DoxyCompactItemize}

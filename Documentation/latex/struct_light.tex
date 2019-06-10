@@ -1,0 +1,63 @@
+\hypertarget{struct_light}{}\section{Light Struct Reference}
+\label{struct_light}\index{Light@{Light}}
+
+
+A \mbox{\hyperlink{struct_light}{Light}} Source.  
+
+
+
+
+{\ttfamily \#include $<$Lighting.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_light_a240653e7032ae5e2e1fbbab819422077}\label{struct_light_a240653e7032ae5e2e1fbbab819422077}} 
+glm\+::vec4 \mbox{\hyperlink{struct_light_a240653e7032ae5e2e1fbbab819422077}{position}} = glm\+::vec4(0.\+0)
+\begin{DoxyCompactList}\small\item\em Position of the light in world space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_a32a17277c70463d464c1bb1af80fb8c8}\label{struct_light_a32a17277c70463d464c1bb1af80fb8c8}} 
+glm\+::vec4 \mbox{\hyperlink{struct_light_a32a17277c70463d464c1bb1af80fb8c8}{direction}} = glm\+::vec4(0.\+0, 0.\+0, -\/1.\+0, 1.\+0)
+\begin{DoxyCompactList}\small\item\em Normalized forward vector for the light source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_abcd118cea5b6bb284d218b1df62bbbce}\label{struct_light_abcd118cea5b6bb284d218b1df62bbbce}} 
+glm\+::vec4 \mbox{\hyperlink{struct_light_abcd118cea5b6bb284d218b1df62bbbce}{ambient}} = glm\+::vec4(1.\+0, 0.\+0, 1.\+0, 1.\+0)
+\begin{DoxyCompactList}\small\item\em Ambient color of the light source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_af933e4c1087a91fa621fa9f28ccf3e76}\label{struct_light_af933e4c1087a91fa621fa9f28ccf3e76}} 
+glm\+::vec4 \mbox{\hyperlink{struct_light_af933e4c1087a91fa621fa9f28ccf3e76}{diffuse}} = glm\+::vec4(1.\+0, 0.\+0, 1.\+0, 1.\+0)
+\begin{DoxyCompactList}\small\item\em Diffuse color of the light source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_a083c715bd3f644581975c3d0192ceebb}\label{struct_light_a083c715bd3f644581975c3d0192ceebb}} 
+glm\+::vec4 \mbox{\hyperlink{struct_light_a083c715bd3f644581975c3d0192ceebb}{specular}} = glm\+::vec4(1.\+0, 0.\+0, 1.\+0, 1.\+0)
+\begin{DoxyCompactList}\small\item\em Specular color of the light source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_a775f938a7e4fd7f6c225d67ec99d4061}\label{struct_light_a775f938a7e4fd7f6c225d67ec99d4061}} 
+uint32\+\_\+t \mbox{\hyperlink{struct_light_a775f938a7e4fd7f6c225d67ec99d4061}{is\+Enabled}} = false
+\begin{DoxyCompactList}\small\item\em Is the light source enabled? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_a3e211778e131611d35039827f36f51e5}\label{struct_light_a3e211778e131611d35039827f36f51e5}} 
+float \mbox{\hyperlink{struct_light_a3e211778e131611d35039827f36f51e5}{constant}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Constant light attenuation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_a9d89a84a196a1329cda29df47a937e28}\label{struct_light_a9d89a84a196a1329cda29df47a937e28}} 
+float \mbox{\hyperlink{struct_light_a9d89a84a196a1329cda29df47a937e28}{linear}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Linear light attenuation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_a0427bec0c2333a5dd9a18b2c282d952e}\label{struct_light_a0427bec0c2333a5dd9a18b2c282d952e}} 
+float \mbox{\hyperlink{struct_light_a0427bec0c2333a5dd9a18b2c282d952e}{quadratic}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Quadratic light attenuation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_ac332a2fd5bc62656f30f95b9fcb35e42}\label{struct_light_ac332a2fd5bc62656f30f95b9fcb35e42}} 
+float \mbox{\hyperlink{struct_light_ac332a2fd5bc62656f30f95b9fcb35e42}{cut\+Off}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Inner Dot product cutoff value for spotlights. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_ae1b428a65d7a814fed9587c231b624e4}\label{struct_light_ae1b428a65d7a814fed9587c231b624e4}} 
+float \mbox{\hyperlink{struct_light_ae1b428a65d7a814fed9587c231b624e4}{outer\+Cut\+Off}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Outer Dot product cutoff value for spotlights. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_ab0c279c927973443f7b52fc924b489aa}\label{struct_light_ab0c279c927973443f7b52fc924b489aa}} 
+Light\+Type \mbox{\hyperlink{struct_light_ab0c279c927973443f7b52fc924b489aa}{light\+Type}} = Light\+Type\+::\+None
+\begin{DoxyCompactList}\small\item\em The light type (dirctional, point, or spot) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_light_a380e4b1feffdcac4a45ced488173892d}\label{struct_light_a380e4b1feffdcac4a45ced488173892d}} 
+char \mbox{\hyperlink{struct_light_a380e4b1feffdcac4a45ced488173892d}{padding}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em Padding values to fix alignment issues passing to the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \mbox{\hyperlink{struct_light}{Light}} Source. 
+
+A struct containing the info necessary for any particular light Note\+: member order is specific, as it is copied byte-\/by-\/byte into a buffer, and the shaders also expect the same order 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Lighting.\+h\end{DoxyCompactItemize}

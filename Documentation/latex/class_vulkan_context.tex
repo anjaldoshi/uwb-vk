@@ -1,0 +1,172 @@
+\hypertarget{class_vulkan_context}{}\section{Vulkan\+Context Class Reference}
+\label{class_vulkan_context}\index{VulkanContext@{VulkanContext}}
+
+
+Contains primary Vulkan constructs that remain constant throughout the a uwb-\/vk application.  
+
+
+
+
+{\ttfamily \#include $<$Vulkan\+Context.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vulkan_context_ad16e483649f2b66fe9659f473765dc35}{initialize}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{class_vulkan_context_ac1c5718ae7cdbcce4dec66cfacc3c7b2}{window}}, const std\+::string \&app\+Name)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_af801707b6c41d083806ff62ee4342fba}\label{class_vulkan_context_af801707b6c41d083806ff62ee4342fba}} 
+void \mbox{\hyperlink{class_vulkan_context_af801707b6c41d083806ff62ee4342fba}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all allocated resources. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_vulkan_context_aa38181d82d01ea61a372bf624d90cc36}{find\+Memory\+Type}} (uint32\+\_\+t type\+Filter, Vk\+Memory\+Property\+Flags properties)
+\begin{DoxyCompactList}\small\item\em Finds the best available memory type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vulkan_context_ac1c5718ae7cdbcce4dec66cfacc3c7b2}\label{class_vulkan_context_ac1c5718ae7cdbcce4dec66cfacc3c7b2}} 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{class_vulkan_context_ac1c5718ae7cdbcce4dec66cfacc3c7b2}{window}}
+\begin{DoxyCompactList}\small\item\em G\+L\+FW window the application renders to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_a53a75b19d91d4626eefa0114b4e2af09}\label{class_vulkan_context_a53a75b19d91d4626eefa0114b4e2af09}} 
+Vk\+Physical\+Device \mbox{\hyperlink{class_vulkan_context_a53a75b19d91d4626eefa0114b4e2af09}{physical\+Device}}
+\begin{DoxyCompactList}\small\item\em Selected physical device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_a6354038513569b86a28a70974d3520ac}\label{class_vulkan_context_a6354038513569b86a28a70974d3520ac}} 
+Vk\+Device \mbox{\hyperlink{class_vulkan_context_a6354038513569b86a28a70974d3520ac}{device}}
+\begin{DoxyCompactList}\small\item\em Device used for all Vulkan operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_a49f97c665dcc5253017e71b8a90359f6}\label{class_vulkan_context_a49f97c665dcc5253017e71b8a90359f6}} 
+\mbox{\hyperlink{struct_queue_family_indices}{Queue\+Family\+Indices}} \mbox{\hyperlink{class_vulkan_context_a49f97c665dcc5253017e71b8a90359f6}{selected\+Indices}}
+\begin{DoxyCompactList}\small\item\em Indices of the selected device queues. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_a14646ba94cb79b85954aff4b079d7cb9}\label{class_vulkan_context_a14646ba94cb79b85954aff4b079d7cb9}} 
+Vk\+Queue \mbox{\hyperlink{class_vulkan_context_a14646ba94cb79b85954aff4b079d7cb9}{graphics\+Queue}}
+\begin{DoxyCompactList}\small\item\em Queue used for drawing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_afebcba9c6075ed29adcce463e7e1ef61}\label{class_vulkan_context_afebcba9c6075ed29adcce463e7e1ef61}} 
+Vk\+Queue \mbox{\hyperlink{class_vulkan_context_afebcba9c6075ed29adcce463e7e1ef61}{present\+Queue}}
+\begin{DoxyCompactList}\small\item\em Queue used for presentation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_a276a8cc1086721396d80cf07cc6cd168}\label{class_vulkan_context_a276a8cc1086721396d80cf07cc6cd168}} 
+Vk\+Surface\+K\+HR \mbox{\hyperlink{class_vulkan_context_a276a8cc1086721396d80cf07cc6cd168}{surface}}
+\begin{DoxyCompactList}\small\item\em Surface to be drawn to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vulkan_context_a8b9ae9353949c8aedae2d83ae26e36b1}{create\+Instance}} (const std\+::string \&app\+Name)
+\begin{DoxyCompactList}\small\item\em Creates the Vk\+Instance Object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vulkan_context_a0eb4e3eb641460f6b02d3d576089e55e}{create\+Device}} (Vk\+Instance instance)
+\item 
+void \mbox{\hyperlink{class_vulkan_context_add181a467a57654e64f9ae2c6345e107}{create\+Surface}} (Vk\+Instance instance, G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{class_vulkan_context_ac1c5718ae7cdbcce4dec66cfacc3c7b2}{window}})
+\begin{DoxyCompactList}\small\item\em Creates the Vk\+Surface\+K\+HR Object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vulkan_context_a7f95badc58b644fcc0869e94e2bf6cc0}{print\+Physical\+Device\+Details}} (Vk\+Physical\+Device \mbox{\hyperlink{class_vulkan_context_a6354038513569b86a28a70974d3520ac}{device}})
+\begin{DoxyCompactList}\small\item\em Prints the details of a given Vk\+Physical\+Device to the console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_a2a2d18c0abe52420f8f1e6f72af863b3}\label{class_vulkan_context_a2a2d18c0abe52420f8f1e6f72af863b3}} 
+std\+::vector$<$ const char $\ast$ $>$ \mbox{\hyperlink{class_vulkan_context_a2a2d18c0abe52420f8f1e6f72af863b3}{get\+Required\+Extensions}} ()
+\begin{DoxyCompactList}\small\item\em Gets a list of extensions required to run the application. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_aabb49cfd50da21000ad68ee9b480f80a}\label{class_vulkan_context_aabb49cfd50da21000ad68ee9b480f80a}} 
+void \mbox{\hyperlink{class_vulkan_context_aabb49cfd50da21000ad68ee9b480f80a}{setup\+Debug\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Sets up a callback for Validation Layers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vulkan_context_a094bedd3fe385240c63e0ca7b857f3ce}\label{class_vulkan_context_a094bedd3fe385240c63e0ca7b857f3ce}} 
+Vk\+Instance \mbox{\hyperlink{class_vulkan_context_a094bedd3fe385240c63e0ca7b857f3ce}{m\+Instance}}
+\begin{DoxyCompactList}\small\item\em Vulkan Instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vulkan_context_ae43e937306f6f72e538b5d6fd8e53f9b}\label{class_vulkan_context_ae43e937306f6f72e538b5d6fd8e53f9b}} 
+Vk\+Debug\+Report\+Callback\+E\+XT \mbox{\hyperlink{class_vulkan_context_ae43e937306f6f72e538b5d6fd8e53f9b}{m\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback used for validation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains primary Vulkan constructs that remain constant throughout the a uwb-\/vk application. 
+
+Initialization of the Vulkan Instance, acquisition of a device, creation of a surface to render to, and setting up the validation layers is handled here. This is the first Object to be made in \mbox{\hyperlink{class_render_system}{Render\+System}}, and the last to be destroyed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vulkan_context_a0eb4e3eb641460f6b02d3d576089e55e}\label{class_vulkan_context_a0eb4e3eb641460f6b02d3d576089e55e}} 
+\index{VulkanContext@{VulkanContext}!createDevice@{createDevice}}
+\index{createDevice@{createDevice}!VulkanContext@{VulkanContext}}
+\subsubsection{\texorpdfstring{createDevice()}{createDevice()}}
+{\footnotesize\ttfamily void Vulkan\+Context\+::create\+Device (\begin{DoxyParamCaption}\item[{Vk\+Instance}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Creates the Vk\+Device Object \mbox{\Hypertarget{class_vulkan_context_a8b9ae9353949c8aedae2d83ae26e36b1}\label{class_vulkan_context_a8b9ae9353949c8aedae2d83ae26e36b1}} 
+\index{VulkanContext@{VulkanContext}!createInstance@{createInstance}}
+\index{createInstance@{createInstance}!VulkanContext@{VulkanContext}}
+\subsubsection{\texorpdfstring{createInstance()}{createInstance()}}
+{\footnotesize\ttfamily void Vulkan\+Context\+::create\+Instance (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{app\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates the Vk\+Instance Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\+Name} & The name of the application \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vulkan_context_add181a467a57654e64f9ae2c6345e107}\label{class_vulkan_context_add181a467a57654e64f9ae2c6345e107}} 
+\index{VulkanContext@{VulkanContext}!createSurface@{createSurface}}
+\index{createSurface@{createSurface}!VulkanContext@{VulkanContext}}
+\subsubsection{\texorpdfstring{createSurface()}{createSurface()}}
+{\footnotesize\ttfamily void Vulkan\+Context\+::create\+Surface (\begin{DoxyParamCaption}\item[{Vk\+Instance}]{instance,  }\item[{G\+L\+F\+Wwindow $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates the Vk\+Surface\+K\+HR Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & The Vulkan Instance\\
+\hline
+{\em window} & The G\+L\+FW window being used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vulkan_context_aa38181d82d01ea61a372bf624d90cc36}\label{class_vulkan_context_aa38181d82d01ea61a372bf624d90cc36}} 
+\index{VulkanContext@{VulkanContext}!findMemoryType@{findMemoryType}}
+\index{findMemoryType@{findMemoryType}!VulkanContext@{VulkanContext}}
+\subsubsection{\texorpdfstring{findMemoryType()}{findMemoryType()}}
+{\footnotesize\ttfamily uint32\+\_\+t Vulkan\+Context\+::find\+Memory\+Type (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{type\+Filter,  }\item[{Vk\+Memory\+Property\+Flags}]{properties }\end{DoxyParamCaption})}
+
+
+
+Finds the best available memory type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Filter} & A bitmask representing the memory types that are requested. Found in Vk\+Memory\+Requirements.\+memory\+Type\+Bits\\
+\hline
+{\em properties} & Properties required of the memory type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vulkan_context_ad16e483649f2b66fe9659f473765dc35}\label{class_vulkan_context_ad16e483649f2b66fe9659f473765dc35}} 
+\index{VulkanContext@{VulkanContext}!initialize@{initialize}}
+\index{initialize@{initialize}!VulkanContext@{VulkanContext}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Vulkan\+Context\+::initialize (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{const std\+::string \&}]{app\+Name }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & the window to be rendered to \\
+\hline
+{\em app\+Name} & the name of the application \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vulkan_context_a7f95badc58b644fcc0869e94e2bf6cc0}\label{class_vulkan_context_a7f95badc58b644fcc0869e94e2bf6cc0}} 
+\index{VulkanContext@{VulkanContext}!printPhysicalDeviceDetails@{printPhysicalDeviceDetails}}
+\index{printPhysicalDeviceDetails@{printPhysicalDeviceDetails}!VulkanContext@{VulkanContext}}
+\subsubsection{\texorpdfstring{printPhysicalDeviceDetails()}{printPhysicalDeviceDetails()}}
+{\footnotesize\ttfamily void Vulkan\+Context\+::print\+Physical\+Device\+Details (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prints the details of a given Vk\+Physical\+Device to the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & The physical device \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Vulkan\+Context.\+h\item 
+src/Vulkan\+Context.\+cpp\end{DoxyCompactItemize}

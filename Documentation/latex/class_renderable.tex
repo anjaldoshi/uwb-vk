@@ -1,0 +1,249 @@
+\hypertarget{class_renderable}{}\section{Renderable Class Reference}
+\label{class_renderable}\index{Renderable@{Renderable}}
+
+
+A Class for representing objects that are rendered in the scene.  
+
+
+
+
+{\ttfamily \#include $<$Renderable.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_renderable_a213b8f43e89f788eb08dc3862bfe83d1}{Renderable}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ context)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_a83b3ad1866b05277a167842c74e6e26d}\label{class_renderable_a83b3ad1866b05277a167842c74e6e26d}} 
+void \mbox{\hyperlink{class_renderable_a83b3ad1866b05277a167842c74e6e26d}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em clean up resources allocated by the \mbox{\hyperlink{class_renderable}{Renderable}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_a22514bc720361a64a3aa90239725f87d}{set\+Mesh}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mesh}{Mesh}} $>$ mesh)
+\begin{DoxyCompactList}\small\item\em Set the mesh used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_a60e28e983a2bd612ea97af28c461e03f}{set\+Shader}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ shader, Vk\+Shader\+Stage\+Flag\+Bits shader\+Stage)
+\begin{DoxyCompactList}\small\item\em Set a specific \mbox{\hyperlink{class_shader}{Shader}} to be used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_aecd652d7761d322b4d485ea2eb047ade}{apply\+Shader\+Set}} (const \mbox{\hyperlink{struct_shader_set}{Shader\+Set}} \&to\+Apply)
+\begin{DoxyCompactList}\small\item\em Apply an entire \mbox{\hyperlink{struct_shader_set}{Shader\+Set}} to this renderable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_a9b19d309beed3946a3e7f3391d0ad711}{add\+Shader\+Binding}} (Vk\+Descriptor\+Type descriptor\+Type, Vk\+Shader\+Stage\+Flag\+Bits stage, uint32\+\_\+t binding\+Num, uint32\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Note a specific binding expected by the shaders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_ae0addbfb8f0af5438106b86da42adca2}{bind\+Texture}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ texture, uint32\+\_\+t binding)
+\begin{DoxyCompactList}\small\item\em Bind a texture to be used by the renderable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_aac8e561417791f38f6dc5899d580a09a}{bind\+Uniform\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ buffer\+Object, uint32\+\_\+t binding)
+\begin{DoxyCompactList}\small\item\em Bind a Uniform Buffer to be used by the renderable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_a16cfd403246dc15dca9b029bab7f2705}{bind\+Shadow\+Map}} (const \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} \&shadow\+Map, uint32\+\_\+t binding)
+\begin{DoxyCompactList}\small\item\em Bind a \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} to be used by the renderable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_aa8e4e151ce4c2fcae97d50b2df1cfbd9}\label{class_renderable_aa8e4e151ce4c2fcae97d50b2df1cfbd9}} 
+void \mbox{\hyperlink{class_renderable_aa8e4e151ce4c2fcae97d50b2df1cfbd9}{create\+Descriptor\+Set\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Create the Vk\+Descriptor\+Set\+Layout this \mbox{\hyperlink{class_renderable}{Renderable}} uses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderable_a3c39d0269a96782e17df8df793ea2286}{create\+Descriptor\+Sets}} (const Vk\+Descriptor\+Pool \&descriptor\+Pool, uint32\+\_\+t swapchain\+Size)
+\begin{DoxyCompactList}\small\item\em Create and write the Vk\+Descriptor\+Sets that will by used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_renderable_a2fdfa7906e3b3a25adcff5ed4d2bbb59}\label{class_renderable_a2fdfa7906e3b3a25adcff5ed4d2bbb59}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mesh}{Mesh}} $>$ \mbox{\hyperlink{class_renderable_a2fdfa7906e3b3a25adcff5ed4d2bbb59}{m\+Mesh}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_mesh}{Mesh}} used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_afdc9b05130a28a7b0cc4ad95c5168603}\label{class_renderable_afdc9b05130a28a7b0cc4ad95c5168603}} 
+\mbox{\hyperlink{struct_shader_set}{Shader\+Set}} \mbox{\hyperlink{class_renderable_afdc9b05130a28a7b0cc4ad95c5168603}{m\+Shader\+Set}}
+\begin{DoxyCompactList}\small\item\em The set of Shaders used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_af5661d4019275a8992afd8b8009444fc}\label{class_renderable_af5661d4019275a8992afd8b8009444fc}} 
+std\+::map$<$ uint32\+\_\+t, Vk\+Descriptor\+Set\+Layout\+Binding $>$ \mbox{\hyperlink{class_renderable_af5661d4019275a8992afd8b8009444fc}{m\+Layout\+Bindings}}
+\begin{DoxyCompactList}\small\item\em All of the bindings used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_a35131c5fcc3d5e2f4340895f01ee642c}\label{class_renderable_a35131c5fcc3d5e2f4340895f01ee642c}} 
+std\+::map$<$ uint32\+\_\+t, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$ $>$ \mbox{\hyperlink{class_renderable_a35131c5fcc3d5e2f4340895f01ee642c}{m\+Buffer\+Bindings}}
+\begin{DoxyCompactList}\small\item\em The U\+B\+Os that are bound to this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_a64794aa77cfcc47cac762d34ec3af309}\label{class_renderable_a64794aa77cfcc47cac762d34ec3af309}} 
+std\+::map$<$ uint32\+\_\+t, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ $>$ \mbox{\hyperlink{class_renderable_a64794aa77cfcc47cac762d34ec3af309}{m\+Texture\+Bindings}}
+\begin{DoxyCompactList}\small\item\em The Textures that are bound to this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_ad2148b83e84e8d0f47b3b7fa45632270}\label{class_renderable_ad2148b83e84e8d0f47b3b7fa45632270}} 
+std\+::map$<$ uint32\+\_\+t, \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} $>$ \mbox{\hyperlink{class_renderable_ad2148b83e84e8d0f47b3b7fa45632270}{m\+Shadow\+Map\+Bindings}}
+\begin{DoxyCompactList}\small\item\em The Shadow\+Maps that are bound to this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_a48b5e71201b6f5229b973dda4e842586}\label{class_renderable_a48b5e71201b6f5229b973dda4e842586}} 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{class_renderable_a48b5e71201b6f5229b973dda4e842586}{m\+Descriptor\+Set\+Layout}}
+\begin{DoxyCompactList}\small\item\em The descriptor\+Set\+Layout Used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_af8ecd1abf5186577438cc386743d67bd}\label{class_renderable_af8ecd1abf5186577438cc386743d67bd}} 
+std\+::vector$<$ Vk\+Descriptor\+Set $>$ \mbox{\hyperlink{class_renderable_af8ecd1abf5186577438cc386743d67bd}{m\+Descriptor\+Sets}}
+\begin{DoxyCompactList}\small\item\em Descriptor\+Sets used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_a0410e149dbc2788e0896a338d105ebd0}\label{class_renderable_a0410e149dbc2788e0896a338d105ebd0}} 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{class_renderable_a0410e149dbc2788e0896a338d105ebd0}{m\+Pipeline\+Layout}}
+\begin{DoxyCompactList}\small\item\em The layout of the pipeline used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_renderable_a5a14d11983a29f3c46fba5ee248a1430}\label{class_renderable_a5a14d11983a29f3c46fba5ee248a1430}} 
+Vk\+Pipeline \mbox{\hyperlink{class_renderable_a5a14d11983a29f3c46fba5ee248a1430}{m\+Pipeline}}
+\begin{DoxyCompactList}\small\item\em The pipeliner used by this \mbox{\hyperlink{class_renderable}{Renderable}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_renderable_a2aeb9aeb0f5ad17b19364700fc79fedd}\label{class_renderable_a2aeb9aeb0f5ad17b19364700fc79fedd}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$ \mbox{\hyperlink{class_renderable_a2aeb9aeb0f5ad17b19364700fc79fedd}{m\+Context}}
+\begin{DoxyCompactList}\small\item\em The Render System\textquotesingle{}s Vulkan Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Class for representing objects that are rendered in the scene. 
+
+This class Represents objects that are rendered within a scene in the \mbox{\hyperlink{class_render_system}{Render\+System}}. It consists of\+: a mesh, a shader\+Set, Bindings, A descriptor\+Set\+Layout, descriptor\+Sets, a pipeline layout, and a pipeline. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_renderable_a213b8f43e89f788eb08dc3862bfe83d1}\label{class_renderable_a213b8f43e89f788eb08dc3862bfe83d1}} 
+\index{Renderable@{Renderable}!Renderable@{Renderable}}
+\index{Renderable@{Renderable}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{Renderable()}{Renderable()}}
+{\footnotesize\ttfamily Renderable\+::\+Renderable (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_vulkan_context}{Vulkan\+Context}} $>$}]{context }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The Render System\textquotesingle{}s Vulkan Context object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_renderable_a9b19d309beed3946a3e7f3391d0ad711}\label{class_renderable_a9b19d309beed3946a3e7f3391d0ad711}} 
+\index{Renderable@{Renderable}!addShaderBinding@{addShaderBinding}}
+\index{addShaderBinding@{addShaderBinding}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{addShaderBinding()}{addShaderBinding()}}
+{\footnotesize\ttfamily void Renderable\+::add\+Shader\+Binding (\begin{DoxyParamCaption}\item[{Vk\+Descriptor\+Type}]{descriptor\+Type,  }\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{stage,  }\item[{uint32\+\_\+t}]{binding\+Num,  }\item[{uint32\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Note a specific binding expected by the shaders. 
+
+This method does not actually bind resources but prepares a list of what bindings to expect. When actually binding resources, this list is checked to ensure that all the expected resources are filled and there are no duplicates, etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em descriptor\+Type} & The type of descriptor to use (i.\+e image/sampler or uniform buffer) \\
+\hline
+{\em stage} & The stage the binding is at \\
+\hline
+{\em binding\+Num} & The number to bind at \\
+\hline
+{\em count} & The number of resources of that type to bind to the given binding\+Num \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderable_aecd652d7761d322b4d485ea2eb047ade}\label{class_renderable_aecd652d7761d322b4d485ea2eb047ade}} 
+\index{Renderable@{Renderable}!applyShaderSet@{applyShaderSet}}
+\index{applyShaderSet@{applyShaderSet}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{applyShaderSet()}{applyShaderSet()}}
+{\footnotesize\ttfamily void Renderable\+::apply\+Shader\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_shader_set}{Shader\+Set}} \&}]{to\+Apply }\end{DoxyParamCaption})}
+
+
+
+Apply an entire \mbox{\hyperlink{struct_shader_set}{Shader\+Set}} to this renderable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Apply} & The \mbox{\hyperlink{class_shader}{Shader}} taht is going to be applied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderable_a16cfd403246dc15dca9b029bab7f2705}\label{class_renderable_a16cfd403246dc15dca9b029bab7f2705}} 
+\index{Renderable@{Renderable}!bindShadowMap@{bindShadowMap}}
+\index{bindShadowMap@{bindShadowMap}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{bindShadowMap()}{bindShadowMap()}}
+{\footnotesize\ttfamily void Renderable\+::bind\+Shadow\+Map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} \&}]{shadow\+Map,  }\item[{uint32\+\_\+t}]{binding }\end{DoxyParamCaption})}
+
+
+
+Bind a \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} to be used by the renderable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shadow\+Map} & The shadow\+Map to bind \\
+\hline
+{\em binding} & The value at which to bind the \mbox{\hyperlink{struct_shadow_map}{Shadow\+Map}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderable_ae0addbfb8f0af5438106b86da42adca2}\label{class_renderable_ae0addbfb8f0af5438106b86da42adca2}} 
+\index{Renderable@{Renderable}!bindTexture@{bindTexture}}
+\index{bindTexture@{bindTexture}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{bindTexture()}{bindTexture()}}
+{\footnotesize\ttfamily void Renderable\+::bind\+Texture (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$}]{texture,  }\item[{uint32\+\_\+t}]{binding }\end{DoxyParamCaption})}
+
+
+
+Bind a texture to be used by the renderable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture to bind \\
+\hline
+{\em binding} & The value to bind the texture \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderable_aac8e561417791f38f6dc5899d580a09a}\label{class_renderable_aac8e561417791f38f6dc5899d580a09a}} 
+\index{Renderable@{Renderable}!bindUniformBuffer@{bindUniformBuffer}}
+\index{bindUniformBuffer@{bindUniformBuffer}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{bindUniformBuffer()}{bindUniformBuffer()}}
+{\footnotesize\ttfamily void Renderable\+::bind\+Uniform\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_b_o}{U\+BO}} $>$}]{buffer\+Object,  }\item[{uint32\+\_\+t}]{binding }\end{DoxyParamCaption})}
+
+
+
+Bind a Uniform Buffer to be used by the renderable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer\+Object} & The \mbox{\hyperlink{struct_u_b_o}{U\+BO}} to be bound to the pipeline \\
+\hline
+{\em binding} & The value at which to bind the \mbox{\hyperlink{struct_u_b_o}{U\+BO}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderable_a3c39d0269a96782e17df8df793ea2286}\label{class_renderable_a3c39d0269a96782e17df8df793ea2286}} 
+\index{Renderable@{Renderable}!createDescriptorSets@{createDescriptorSets}}
+\index{createDescriptorSets@{createDescriptorSets}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{createDescriptorSets()}{createDescriptorSets()}}
+{\footnotesize\ttfamily void Renderable\+::create\+Descriptor\+Sets (\begin{DoxyParamCaption}\item[{const Vk\+Descriptor\+Pool \&}]{descriptor\+Pool,  }\item[{uint32\+\_\+t}]{swapchain\+Size }\end{DoxyParamCaption})}
+
+
+
+Create and write the Vk\+Descriptor\+Sets that will by used by this \mbox{\hyperlink{class_renderable}{Renderable}}. 
+
+This method checks against the shader Bindings for missing resources. Then, it creates a new Descriptor set for every swapchain image that contains all of the bindings used by this \mbox{\hyperlink{class_renderable}{Renderable}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em descriptor\+Pool} & The descriptor\+Pool to draw from when making new descriptor sets \\
+\hline
+{\em swapchain\+Size} & The number of images in the swapchain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderable_a22514bc720361a64a3aa90239725f87d}\label{class_renderable_a22514bc720361a64a3aa90239725f87d}} 
+\index{Renderable@{Renderable}!setMesh@{setMesh}}
+\index{setMesh@{setMesh}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{setMesh()}{setMesh()}}
+{\footnotesize\ttfamily void Renderable\+::set\+Mesh (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_mesh}{Mesh}} $>$}]{mesh }\end{DoxyParamCaption})}
+
+
+
+Set the mesh used by this \mbox{\hyperlink{class_renderable}{Renderable}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & The mesh This \mbox{\hyperlink{class_renderable}{Renderable}} will use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderable_a60e28e983a2bd612ea97af28c461e03f}\label{class_renderable_a60e28e983a2bd612ea97af28c461e03f}} 
+\index{Renderable@{Renderable}!setShader@{setShader}}
+\index{setShader@{setShader}!Renderable@{Renderable}}
+\subsubsection{\texorpdfstring{setShader()}{setShader()}}
+{\footnotesize\ttfamily void Renderable\+::set\+Shader (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$}]{shader,  }\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{shader\+Stage }\end{DoxyParamCaption})}
+
+
+
+Set a specific \mbox{\hyperlink{class_shader}{Shader}} to be used by this \mbox{\hyperlink{class_renderable}{Renderable}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader being applied \\
+\hline
+{\em shader\+Stage} & The pipeline stage the shader will be used at \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Renderable.\+h\item 
+src/Renderable.\+cpp\end{DoxyCompactItemize}
